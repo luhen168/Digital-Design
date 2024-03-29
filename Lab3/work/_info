@@ -1,0 +1,301 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+V:Gea66_Wd;hQfehTbJiE82
+04 13 4 work clk_testbench fast 0
+=1-68f728ba1f7c-66050c44-1fe-3eec
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z2 OL;O;10.2c;57
+Z3 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
+!s110 1711606852
+T_opt1
+V@TT0BXimoDD@XEQnC?R:11
+04 21 4 work test_second_module_tb fast 0
+=2-68f728ba1f7c-6605d5cb-1d5-42dc
+R1
+n@_opt1
+R2
+R3
+!s110 1711658443
+T_opt2
+!s110 1711708367
+VLzhCj:<HomnCF;FGb<LS50
+04 23 4 work tb_module_clock_century fast 0
+=16-68f728ba1f7c-660698cf-308-2a84
+R1
+n@_opt2
+R2
+vHoursCounter
+Z4 !s110 1711708363
+Io]gHhcSbj6XZRn84edi6Q1
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+Z6 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3
+Z7 w1711707930
+Z8 8C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\module_clock_century.v
+Z9 FC:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\module_clock_century.v
+L0 146
+Z10 OL;L;10.2c;57
+r1
+31
+Z11 !s108 1711708363.423000
+Z12 !s107 C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\module_clock_century.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\module_clock_century.v|
+Z14 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@hours@counter
+!s100 SM_6hf;l[fH=Q57K9FLCM1
+!i10b 1
+!s85 0
+!i111 0
+vMinutesCounter
+R4
+Ib0]<b38KS7KcT`68APE@T1
+R5
+R6
+R7
+R8
+R9
+L0 117
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@minutes@counter
+!s100 Q8X3;F<4006Rj<Bjb:EkE3
+!i10b 1
+!s85 0
+!i111 0
+vmodule_clock_century
+R4
+IEWF<SfS4A@TZV2^gkjZAO1
+R5
+R6
+R7
+R8
+R9
+L0 1
+R10
+r1
+31
+R11
+R12
+R13
+R14
+!s100 XE=k;bRH8D`PY4C?N97h@3
+!i10b 1
+!s85 0
+!i111 0
+vSecondsCounter
+R4
+I4;AVS`F5X?]FTC2LBSDhK0
+R5
+R6
+R7
+R8
+R9
+L0 89
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@seconds@counter
+!s100 K`kz?UU<a@RYUc:SUPg?:3
+!i10b 1
+!s85 0
+!i111 0
+vsig_1s
+R4
+IcefGD[IW02N:NZWUdcoXb3
+R5
+R6
+R7
+R8
+R9
+L0 62
+R10
+r1
+31
+R11
+R12
+R13
+R14
+!s100 dkY>N4>MhzQ_F96Ao5fSi0
+!i10b 1
+!s85 0
+!i111 0
+vsub_bcd6bits
+R4
+IWKd_GGl>F8<ZaZY8ENW9@1
+R5
+R6
+Z15 w1711699031
+Z16 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v
+Z17 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v
+L0 56
+R10
+r1
+31
+Z18 !s108 1711708363.548000
+Z19 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v|
+Z20 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v|
+R14
+!s100 [z8N@>kg52mb_UePnieii1
+!i10b 1
+!s85 0
+!i111 0
+vsub_bcd6bits2
+R4
+I9[QH=:Bo_NOM3DOVIo8d33
+R5
+R6
+R15
+R16
+R17
+L0 78
+R10
+r1
+31
+R18
+R19
+R20
+R14
+!s100 7IRF`_[GQL]gC@CG=j0?Q1
+!i10b 1
+!s85 0
+!i111 0
+vsub_Display7seg
+R4
+IR@9:TS]TGYmBjO>ngmT_O2
+R5
+R6
+R15
+R16
+R17
+L0 140
+R10
+r1
+31
+R18
+R19
+R20
+R14
+nsub_@display7seg
+!s100 T?7>9hP17QKbj0@H<?`S[2
+!i10b 1
+!s85 0
+!i111 0
+vtb_module_clock_century
+IZ4O5]X2HB0lRU<M?NJ27Z2
+R5
+R6
+w1711708341
+Z21 8C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v
+Z22 FC:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v
+L0 1
+R10
+r1
+31
+Z23 !s90 -reportprogress|300|-work|work|-vopt|C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v|
+R14
+R4
+Z24 !s107 C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v|
+!s100 9bVNb2GAZ]I`@b9YUI_;=0
+!s108 1711708363.329000
+!i10b 1
+!s85 0
+!i111 0
+vtest
+R4
+IS1O23UbU@WF3U>Yj@>VHV3
+R5
+R6
+R15
+R16
+R17
+L0 2
+R10
+r1
+31
+R18
+R19
+R20
+R14
+!s100 o3ncm3I`J[BM852OJL55C0
+!i10b 1
+!s85 0
+!i111 0
+vtest_second_module_tb
+I9L58^lGN95DENRkho`zJe2
+R5
+R6
+w1711658425
+R21
+R22
+L0 43
+R10
+r1
+31
+R14
+R23
+R24
+!s110 1711658438
+!s100 d5iMM0V;_cFDX4??iCgLT3
+!s108 1711658438.593000
+!i10b 1
+!s85 0
+!i111 0
+vtop_bcd6bits
+R4
+IW:1=F5Z2P:S6YC_kalEYZ3
+R5
+R6
+R15
+R16
+R17
+L0 32
+R10
+r1
+31
+R18
+R19
+R20
+R14
+!s100 g[m1HT6YRL1O>gQDCY[P40
+!i10b 1
+!s85 0
+!i111 0
+vtop_Display7seg
+R4
+I:kP2bzcA3n5ilUAXmU@mG1
+R5
+R6
+R15
+R16
+R17
+L0 125
+R10
+r1
+31
+R18
+R19
+R20
+R14
+ntop_@display7seg
+!s100 8DF=j:d1e@C7Y41W1^`UJ0
+!i10b 1
+!s85 0
+!i111 0

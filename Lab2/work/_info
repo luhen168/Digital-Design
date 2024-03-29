@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/questasim64_10.2c/examples
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Vd42UHS7daH`4=Rab<WbRP3
+04 5 4 work adder fast 0
+=1-68f728ba1f7c-65fe3140-38e-18a4
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.2c;57
+Z3 dC:/questasim64_10.2c/examples
+!s110 1711157569
+T_opt1
+!s110 1711157707
+VOFce5?J[5e1>k?SQO_WNC1
+04 15 4 work testbench_adder fast 0
+=1-68f728ba1f7c-65fe31ca-3d9-3914
+R1
+n@_opt1
+R2
+T_opt2
+VP1n]OM_h5]ZhAhSY1HP2J2
+04 18 4 work testbench_majority fast 0
+=1-68f728ba1f7c-65fd50af-4a-2a28
+R1
+n@_opt2
+R2
+R3
+!s110 1711100079
+vadder
+Z4 !s110 1711157555
+IV2LbEZLd9g`FW3KAnNVjQ3
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+Z6 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
+Z7 w1711101571
+Z8 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab2/adder.v
+Z9 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab2/adder.v
+L0 1
+Z10 OL;L;10.2c;57
+r1
+31
+Z11 !s108 1711157554.967000
+Z12 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab2/adder.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab2/adder.v|
+Z14 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 KOLRDBkU^k28]oiLg]R7J0
+!i10b 1
+!s85 0
+!i111 0
+vtestbench_adder
+R4
+IgEdb:NO;F<QZ[1TW3_S8i0
+R5
+R6
+R7
+R8
+R9
+L0 11
+R10
+r1
+31
+R11
+R12
+R13
+R14
+!s100 H0E?Z@g]B]g:6SobXeJTV0
+!i10b 1
+!s85 0
+!i111 0

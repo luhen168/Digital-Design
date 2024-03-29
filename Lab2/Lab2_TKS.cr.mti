@@ -1,0 +1,9 @@
+C:/Users/luan1/OneDrive/Desktop/TKS/Lab2/adder.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab2/adder.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module adder
+-- Compiling module testbench_adder
+
+Top level modules:
+	testbench_adder
+
+} {} {}}

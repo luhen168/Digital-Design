@@ -1,0 +1,89 @@
+# do Lab1_7segment.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900
+# ". Lockfile is "C:/Users/luan1/OneDrive/Desktop/TKS/Lab1/simulation/qsim/work/_lock".
+# 
+# ** Warning: (vlog-6) -- Waiting for lock by "luan1@DESKTOP-8C8EPSK, pid = 9900

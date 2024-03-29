@@ -1,0 +1,37 @@
+//Comment method 1: the first project
+/*Comment method 2 */
+//Module Top 
+module top_7segment{
+	input [15:0] in_top,    // bit msb trong so ben trai, [msb:lsb]
+	out [27:0] out_top
+}
+
+bin_to_7segment inst0(.in(in_top[3:0]),.out(out_top[6:0])); // ben trong ngoac la in_top la tin hieu 
+bin_to_7segment inst1(.in(in_top[7:4]),.out(out_top[13:7]));
+bin_to_7segment inst2(.in(in_top[11:8]),.out(out_top[20:14]));
+bin_to_7segment inst3(.in(in_top[15:12]),.out(out_top[27:21]));
+
+endmodule
+
+
+module bin_to_7segment (					// module gia ma led 7 thanh 
+	input [3:0] in,				// khai bao co 4 input 0->3 ung voi A->D
+	output [6:0] out				// khai bao co 7 output 0->6 ung voi F1->F7
+);
+
+wire a,b,c,d;
+assign a = in[0];
+assign b = in[1];
+assign c = in[2];
+assign d = in[3];
+
+// Luc nap mach co the bi nguoc thi dao lai chi so 
+assign out[0] = ~b&~d|b&d|a|c 				//ham F1 
+assign out[1] = ~b|~c&~d|c&d  				//ham F2 
+assign out[2] = ~c|d|b		   				//ham F3
+assign out[3] = ~b&~d|~b&c|b&~c&d|c&~d|a 	//ham F4 
+assign out[4] = ~b&~d|c&~d 					//ham F5 
+assign out[5] = ~c&~d|b&~c|b&~d|a 			//ham F6 
+assign out[6] = ~b&c|b&~c|b&~d|a 			//ham F7 
+
+endmodule
