@@ -29,16 +29,14 @@ module tb_module_clock_century;
     MinutesCounter inst_min (
         .clk(clk),
         .rst(rst),
-        .sig_1s(sig_1s),
-        .next_minute(next_minute),  // input to get incre minute
-        .next_hour(next_hour),
-        .minutes(minutes)
+        .next_minute(next_minute),  // input
+        .next_hour(next_hour),      // output 
+        .minutes(minutes)           
     );
 
     HoursCounter inst_hour (
         .clk(clk),
-        .rst(rst),
-        .sig_1s(sig_1s),
+        .rst(rst),      
         .next_hour(next_hour),      // input
         .next_day (next_day),       // output
         .hours(hours)               // output 

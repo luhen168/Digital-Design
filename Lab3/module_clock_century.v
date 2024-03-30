@@ -23,27 +23,25 @@ module module_clock_century (
     SecondsCounter inst_sec (
         .clk(clk),                  // input
         .rst(rst),                  // input
-		.sig_1s(sig_1s),            // input
+		.sig_1s(sig_1s),            // input from module sig_1s
         .next_minute(next_minute),  // output to incre minute
-        .seconds(seconds)           // output for 7-seg
+        .seconds(seconds)           // output for bcd6its
     );
 
     MinutesCounter inst_min (
         .clk(clk),                  // input 
         .rst(rst),                  // input
-        .sig_1s(sig_1s),            // input
-        .next_minute(next_minute),  // input to get incre minute
+        .next_minute(next_minute),  // input  
         .next_hour(next_hour),      // output
-        .minutes(minutes)           // output 
+        .minutes(minutes)           // output for 7-seg
     );
 
     HoursCounter inst_hour (
         .clk(clk),                  // input
         .rst(rst),                  // input
-        .sig_1s(sig_1s),
-        .next_hour(next_hour),
-        .next_day (next_day),
-        .hours(hours)
+        .next_hour(next_hour),      // input
+        .next_day (next_day),       // output
+        .hours(hours)               // output 
     );
 
     test inst_display (
@@ -71,7 +69,7 @@ module sig_1s (
     reg [31:0] counter;
 
     always @(posedge clk or negedge rst)begin
-        if (~rst) begin      // reset khi clock ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©c logic 0
+        if (~rst) begin      
             counter <= 0;
             sig_1s <= 1;
         end else begin
@@ -91,53 +89,50 @@ module SecondsCounter (
     input rst,
     input sig_1s,
     output wire [5:0] seconds, // var type net is wire 
-    output reg next_minute 
+    output next_minute 
 );
     reg [5:0] sec_counter;
 
     always @(posedge clk or negedge rst)begin
-        if (~rst) begin      // reset khi clock ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©c logic 0
-            sec_counter <= 6'b000000;
-            next_minute <= 1'b0;
+        if (~rst) begin      // 
+            sec_counter <= 6'd0;
         end else begin
             if (sig_1s == 1) begin
-                if (sec_counter == 6'b111011) begin
-                    sec_counter = 6'b000000;
-                    next_minute = 1'b1;
+                if (sec_counter == 6'd59) begin
+                    sec_counter = 6'd0;
                 end else begin
                     sec_counter <= sec_counter + 1;
-                    next_minute <= 1'b0;
                 end
-            end
+            end 
         end 
     end
+    assign next_minute = (sec_counter == 6'd59) & sig_1s;
     assign seconds = sec_counter; // gan' ouput de? muc dich hien thi led 7 thanh
 endmodule
 
 module MinutesCounter (
     input clk,     
     input rst,
-    input sig_1s,
     input next_minute,
     output wire [5:0] minutes, // var type net is wire 
-    output reg next_hour 
+    output next_hour 
 );
     reg [5:0] minute_counter;  // 
 
     always @(posedge clk or negedge rst) begin
         if (~rst) begin
-            minute_counter <= 6'b000000;
-            next_hour <= 1'b0;
-        end else if(next_minute == 1&& sig_1s == 1)begin
-            if (minute_counter == 6'b111011) begin
-                minute_counter <= 6'b000000; 
-                next_hour <= 1'b1;
-            end else begin
-                minute_counter <= minute_counter + 1;
-                next_hour <= 1'b0;
-            end
+            minute_counter <= 6'd0;
+        end else begin 
+            if(next_minute == 1)begin
+                if (minute_counter == 6'd59) begin
+                    minute_counter <= 6'd0; 
+                end else begin
+                    minute_counter <= minute_counter + 1;
+                end
+            end 
         end
     end
+    assign next_hour = (minute_counter == 6'd59) & next_minute ;
     assign minutes = minute_counter;
 endmodule
 
@@ -146,27 +141,26 @@ endmodule
 module HoursCounter (
     input clk,
     input rst,
-    input sig_1s,
     input next_hour,
-    output wire [4:0] hours, // var type net is wire 
-    output reg next_day
+    output wire [5:0] hours, // var type net is wire 
+    output next_day
 );
 
-    reg [4:0] hour_counter;
+    reg [5:0] hour_counter;
 
     always @(posedge clk or negedge rst) begin
         if (~rst) begin
-            hour_counter <= 5'b00000;
-            next_day <= 1'b0;
-        end else if(next_hour==1&&sig_1s == 1) begin
-            if (hour_counter == 5'b10111) begin
-                hour_counter <= 5'b00000; // Reset hour_counter when it = 23
-                next_day <= 1'b1;
-            end else begin
-                hour_counter <= hour_counter + 1;
-                next_day <= 1'b0;
+            hour_counter <= 5'd0;
+        end else begin
+            if(next_hour == 1) begin
+                if (hour_counter == 5'd23) begin
+                    hour_counter <= 5'd0; // Reset hour_counter when it = 23
+                end else begin
+                    hour_counter <= hour_counter + 1;
+                end
             end
         end
     end
+    // assign next_hour = (minute_counter == 6'd59) & next_minute ;
     assign hours = hour_counter;
 endmodule
