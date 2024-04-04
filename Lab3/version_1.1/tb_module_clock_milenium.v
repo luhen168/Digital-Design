@@ -1,10 +1,10 @@
-module tb_module_clock_century;
+module tb_module_clock_milenium;
     reg clk;
     reg rst;
     reg in;
     wire sig_1s;
     wire [5:0] seconds, minutes, hours; // use wire to bcd and display 7- 
-    wire next_minute, next_hour, next_day;    
+    wire sig_1min, sig_1hour, sig_1day;    
 
     // Instantiate the top module
     module_clock_century dut (
@@ -22,23 +22,23 @@ module tb_module_clock_century;
         .clk(clk),
         .rst(rst),
         .sig_1s(sig_1s),
-        .next_minute(next_minute),  // output to incre minute
+        .sig_1min(sig_1min),  // output to incre minute
         .seconds(seconds)           // output for 7-seg
     );
 
     MinutesCounter inst_min (
         .clk(clk),
         .rst(rst),
-        .next_minute(next_minute),  // input
-        .next_hour(next_hour),      // output 
+        .sig_1min(sig_1min),  // input
+        .sig_1hour(sig_1hour),      // output 
         .minutes(minutes)           
     );
 
     HoursCounter inst_hour (
         .clk(clk),
         .rst(rst),      
-        .next_hour(next_hour),      // input
-        .next_day (next_day),       // output
+        .sig_1hour(sig_1hour),      // input
+        .sig_1day (sig_1day),       // output
         .hours(hours)               // output 
     );
 

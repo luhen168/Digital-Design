@@ -1,5 +1,6 @@
 // TOP module 2
 module test(
+	input [2:0] display_state,
     input [5:0] seconds, minutes, hours,    // Input BCD 6-bits
     output [6:0] unitd_s, tend_s,				// Output 4-bits
     output [6:0] unitd_m, tend_m,
@@ -11,6 +12,7 @@ module test(
     wire [3:0] unit_h, ten_h;
 
 	top_bcd6bits ints_time (
+		.display_state(display_state),
 		.seconds(seconds),
 		.minutes(minutes),
 		.hours  (hours),
@@ -30,6 +32,7 @@ endmodule
 
 // TOP module BCD_6bit
 module top_bcd6bits(
+	input [2:0] display_state,
     input [5:0] seconds, minutes, hours,    // Input BCD 6-bits
     output [3:0] unit_s, ten_s,				// Output 4-bits
     output [3:0] unit_m, ten_m,
@@ -37,16 +40,19 @@ module top_bcd6bits(
 );
 
 	sub_bcd6bits ints_second (         		// sub module in top
+		.display_state(display_state[0]),
 		.bin(seconds),
 		.unit(unit_s),
 		.ten(ten_s)
 		);
 	sub_bcd6bits ints_minute (				// sub module in top
+		.display_state(display_state[1]),
 		.bin(minutes), 
 		.unit(unit_m), 
 		.ten(ten_m)
 		);
 	sub_bcd6bits ints_hour (				// sub module in top
+		.display_state(display_state[2]),
 		.bin(hours), 
 		.unit(unit_h), 
 		.ten(ten_h)
@@ -54,8 +60,9 @@ module top_bcd6bits(
 endmodule
 
 module sub_bcd6bits(
-   input [5:0] bin,
-   output [3:0] unit,ten
+	input display_state,
+   	input [5:0] bin,
+   	output [3:0] unit,ten
    );
    
 integer i;
@@ -70,8 +77,8 @@ always @(bin) begin
     end
 end
 
-   assign unit = bcd[3:0];
-	assign ten = bcd[7:4];
+    assign unit = display_state ? bcd[3:0] : 4'b1111;
+    assign ten = display_state ? bcd[7:4] : 4'b1111;
 endmodule
 
 // Sub module BCD_6bit

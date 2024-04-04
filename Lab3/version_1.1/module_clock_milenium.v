@@ -1,13 +1,15 @@
-module module_clock_century (
+module module_clock_milenium (
     input clk,
     input rst,
     output [6:0] unitd_s, tend_s,               // Output 7-bits to seg 
     output [6:0] unitd_m, tend_m,
     output [6:0] unitd_h, tend_h
 );
+    localparam display_state[2:0] = 3'b111;
+
     wire sig_1s;
     wire [5:0] seconds, minutes, hours;         // use wire to bcd and display 7- 
-    wire next_minute, next_hour, next_day;      // 
+    wire sig_min, sig_1hour, sig_1day;      // 
 
     // 4-bits for each 
     wire [3:0] unit_s, ten_s;
@@ -24,27 +26,28 @@ module module_clock_century (
         .clk(clk),                  // input
         .rst(rst),                  // input
 		.sig_1s(sig_1s),            // input from module sig_1s
-        .next_minute(next_minute),  // output to incre minute
+        .sig_min(sig_min),  // output to incre minute
         .seconds(seconds)           // output for bcd6its
     );
 
     MinutesCounter inst_min (
         .clk(clk),                  // input 
         .rst(rst),                  // input
-        .next_minute(next_minute),  // input  
-        .next_hour(next_hour),      // output
+        .sig_min(sig_min),  // input  
+        .sig_1hour(sig_1hour),      // output
         .minutes(minutes)           // output for 7-seg
     );
 
     HoursCounter inst_hour (
         .clk(clk),                  // input
         .rst(rst),                  // input
-        .next_hour(next_hour),      // input
-        .next_day (next_day),       // output
+        .sig_1hour(sig_1hour),      // input
+        .sig_1day (sig_1day),       // output
         .hours(hours)               // output 
     );
 
     test inst_display (
+        .display_state(display_state),
         .seconds(seconds),
         .minutes(minutes),
         .hours  (hours),
@@ -89,7 +92,7 @@ module SecondsCounter (
     input rst,
     input sig_1s,
     output wire [5:0] seconds, // var type net is wire 
-    output next_minute 
+    output sig_min 
 );
     reg [5:0] sec_counter;
 
@@ -106,16 +109,16 @@ module SecondsCounter (
             end 
         end 
     end
-    assign next_minute = (sec_counter == 6'd59) & sig_1s;
+    assign sig_min = (sec_counter == 6'd59) & sig_1s;
     assign seconds = sec_counter; // gan' ouput de? muc dich hien thi led 7 thanh
 endmodule
 
 module MinutesCounter (
     input clk,     
     input rst,
-    input next_minute,
+    input sig_min,
     output wire [5:0] minutes, // var type net is wire 
-    output next_hour 
+    output sig_1hour 
 );
     reg [5:0] minute_counter;  // 
 
@@ -123,7 +126,7 @@ module MinutesCounter (
         if (~rst) begin
             minute_counter <= 6'd0;
         end else begin 
-            if(next_minute == 1)begin
+            if(sig_min == 1)begin
                 if (minute_counter == 6'd59) begin
                     minute_counter <= 6'd0; 
                 end else begin
@@ -132,7 +135,7 @@ module MinutesCounter (
             end 
         end
     end
-    assign next_hour = (minute_counter == 6'd59) & next_minute ;
+    assign sig_1hour = (minute_counter == 6'd59) & sig_min ;
     assign minutes = minute_counter;
 endmodule
 
@@ -141,9 +144,9 @@ endmodule
 module HoursCounter (
     input clk,
     input rst,
-    input next_hour,
+    input sig_1hour,
     output wire [5:0] hours, // var type net is wire 
-    output next_day
+    output sig_1day
 );
 
     reg [5:0] hour_counter;
@@ -152,7 +155,7 @@ module HoursCounter (
         if (~rst) begin
             hour_counter <= 5'd0;
         end else begin
-            if(next_hour == 1) begin
+            if(sig_1hour == 1) begin
                 if (hour_counter == 5'd23) begin
                     hour_counter <= 5'd0; // Reset hour_counter when it = 23
                 end else begin
@@ -161,6 +164,6 @@ module HoursCounter (
             end
         end
     end
-    // assign next_hour = (minute_counter == 6'd59) & next_minute ;
+    // assign sig_1hour = (minute_counter == 6'd59) & sig_min ;
     assign hours = hour_counter;
 endmodule

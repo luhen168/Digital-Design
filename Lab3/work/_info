@@ -9,293 +9,294 @@ Z0 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
 !i10e 25
 !i10f 100
 T_opt
-V:Gea66_Wd;hQfehTbJiE82
-04 13 4 work clk_testbench fast 0
-=1-68f728ba1f7c-66050c44-1fe-3eec
-Z1 o-quiet -auto_acc_if_foreign -work work +acc
-n@_opt
-Z2 OL;O;10.2c;57
-Z3 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
-!s110 1711606852
+Z1 V7FD7Pg6GBE:h4TTb[k`KA0
+Z2 04 23 4 work tb_module_clock_century fast 0
+Z3 =1-68f728ba1f7c-66076a51-32d-1b0c
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;10.2c;57
+Z7 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
+Z8 !s110 1711762002
 T_opt1
-V@TT0BXimoDD@XEQnC?R:11
-04 21 4 work test_second_module_tb fast 0
-=2-68f728ba1f7c-6605d5cb-1d5-42dc
-R1
-n@_opt1
-R2
-R3
-!s110 1711658443
+Z9 V@TT0BXimoDD@XEQnC?R:11
+Z10 04 21 4 work test_second_module_tb fast 0
+Z11 =2-68f728ba1f7c-6605d5cb-1d5-42dc
+Z12 o-quiet -auto_acc_if_foreign -work work +acc
+Z13 n@_opt1
+R6
+R7
+Z14 !s110 1711658443
 T_opt2
-!s110 1711727675
-V4eE8beGO_GLm4fbQfK[;E3
-04 23 4 work tb_module_clock_century fast 0
-=2-68f728ba1f7c-6606e43b-c5-2a7c
-R1
-n@_opt2
+Z15 V4eE8beGO_GLm4fbQfK[;E3
 R2
+Z16 =2-68f728ba1f7c-6606e43b-c5-2a7c
+R12
+Z17 n@_opt2
+R6
+R7
+Z18 !s110 1711727675
 vHoursCounter
-Z4 !s110 1711727672
-IRad0fBiEQ7f99S_?hYO4a0
-Z5 V`JN@9S9cnhjKRR_L]QIcM3
-Z6 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3
-Z7 w1711727644
-Z8 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v
-Z9 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v
-L0 141
-Z10 OL;L;10.2c;57
+Z19 !s110 1711762050
+Z20 !s100 UBWHYL7<=Dm_Oeoh6M;[22
+Z21 I2NiX1<z?i[79k1Nz;V:IH3
+Z22 V`JN@9S9cnhjKRR_L]QIcM3
+Z23 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3
+Z24 w1711728781
+Z25 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v
+Z26 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v
+Z27 L0 141
+Z28 OL;L;10.2c;57
 r1
 31
-Z11 !s108 1711727672.275000
-Z12 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v|
-Z13 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v|
-Z14 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-n@hours@counter
-!s100 E`WP=2?Ud3J^XV_G60U`S3
+Z29 !s108 1711762050.553000
+Z30 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v|
+Z31 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/module_clock_century.v|
+Z32 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z33 n@hours@counter
 !i10b 1
 !s85 0
 !i111 0
 vMinutesCounter
-R4
-I4@<G3Vj>AJ4T0R=W4zZ8m3
-R5
-R6
-R7
-R8
-R9
-L0 113
-R10
+R19
+Z34 !s100 =Y_I;gW3OgVU>MbV8O5W[0
+Z35 IX6WLUkLk_hR0iAOdMI6Qg3
+R22
+R23
+R24
+R25
+R26
+Z36 L0 113
+R28
 r1
 31
-R11
-R12
-R13
-R14
-n@minutes@counter
-!s100 j]n]<43J18PC6z=Bii7`_1
+R29
+R30
+R31
+R32
+Z37 n@minutes@counter
 !i10b 1
 !s85 0
 !i111 0
 vmodule_clock_century
-R4
-IkP0gko^02P18KA[Ya:EB42
-R5
-R6
-R7
-R8
-R9
+R19
+Z38 !s100 B>]:`Q=Q`BzTkhbS3_3?I1
+Z39 IkP0gko^02P18KA[Ya:EB42
+R22
+R23
+R24
+R25
+R26
 L0 1
-R10
+R28
 r1
 31
-R11
-R12
-R13
-R14
-!s100 B>]:`Q=Q`BzTkhbS3_3?I1
+R29
+R30
+R31
+R32
 !i10b 1
 !s85 0
 !i111 0
 vSecondsCounter
-R4
-IHj0XY[b>872N2]HQPnl9?1
-R5
-R6
-R7
-R8
-R9
+R19
+Z40 !s100 PD<:ZkolZ0F][mFM92Gl_1
+Z41 I;Z5Q;K5R<]@L5SN^3PTBG0
+R22
+R23
+R24
+R25
+R26
 L0 87
-R10
+R28
 r1
 31
-R11
-R12
-R13
-R14
-n@seconds@counter
-!s100 RMoEZRRiH1j<2_j3B^G@i0
+R29
+R30
+R31
+R32
+Z42 n@seconds@counter
 !i10b 1
 !s85 0
 !i111 0
 vsig_1s
-R4
-IPPh<fE_4ec[1z0]NhB7eE2
-R5
-R6
-R7
-R8
-R9
+R19
+Z43 !s100 8oSTTYSSzZ9PnI5BNhbDE0
+Z44 IPPh<fE_4ec[1z0]NhB7eE2
+R22
+R23
+R24
+R25
+R26
 L0 60
-R10
+R28
 r1
 31
-R11
-R12
-R13
-R14
-!s100 8oSTTYSSzZ9PnI5BNhbDE0
+R29
+R30
+R31
+R32
 !i10b 1
 !s85 0
 !i111 0
 vsub_bcd6bits
-R4
-IWKd_GGl>F8<ZaZY8ENW9@1
-R5
-R6
-Z15 w1711721794
-Z16 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v
-Z17 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v
+R19
+!i10b 1
+Z45 !s100 [z8N@>kg52mb_UePnieii1
+Z46 IWKd_GGl>F8<ZaZY8ENW9@1
+R22
+R23
+Z47 w1711721794
+Z48 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v
+Z49 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v
 L0 56
-R10
+R28
 r1
-31
-Z18 !s108 1711727672.559000
-Z19 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v|
-Z20 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v|
-R14
-!s100 [z8N@>kg52mb_UePnieii1
-!i10b 1
 !s85 0
+31
+Z50 !s108 1711762050.665000
+Z51 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v|
+Z52 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/test.v|
 !i111 0
+R32
 vsub_bcd6bits2
-R4
-I9[QH=:Bo_NOM3DOVIo8d33
-R5
-R6
-R15
-R16
-R17
+R19
+!i10b 1
+Z53 !s100 7IRF`_[GQL]gC@CG=j0?Q1
+Z54 I9[QH=:Bo_NOM3DOVIo8d33
+R22
+R23
+R47
+R48
+R49
 L0 78
-R10
+R28
 r1
-31
-R18
-R19
-R20
-R14
-!s100 7IRF`_[GQL]gC@CG=j0?Q1
-!i10b 1
 !s85 0
+31
+R50
+R51
+R52
 !i111 0
+R32
 vsub_Display7seg
-R4
-IR@9:TS]TGYmBjO>ngmT_O2
-R5
-R6
-R15
-R16
-R17
-L0 140
-R10
-r1
-31
-R18
 R19
-R20
-R14
-nsub_@display7seg
-!s100 T?7>9hP17QKbj0@H<?`S[2
 !i10b 1
+Z55 !s100 T?7>9hP17QKbj0@H<?`S[2
+Z56 IR@9:TS]TGYmBjO>ngmT_O2
+R22
+R23
+R47
+R48
+R49
+Z57 L0 140
+R28
+r1
 !s85 0
+31
+R50
+R51
+R52
 !i111 0
+R32
+Z58 nsub_@display7seg
 vtb_module_clock_century
-I0oa:Iif48JDR3=0J;UPzQ1
-R5
-R6
-w1711727084
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v
+Z59 !s100 PKPmD[Gi_VW=Z>8bjY:lP1
+Z60 I0oa:Iif48JDR3=0J;UPzQ1
+R22
+R23
+Z61 w1711727084
+Z62 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v
+Z63 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v
 L0 1
-R10
+R28
 r1
 31
-R14
-R4
-!s100 PKPmD[Gi_VW=Z>8bjY:lP1
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v|
-!s108 1711727672.088000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v|
+Z64 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v|
+R32
+R19
+Z65 !s108 1711762050.445000
+Z66 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/tb_module_clock_century.v|
 !i10b 1
 !s85 0
 !i111 0
 vtest
-R4
-IS1O23UbU@WF3U>Yj@>VHV3
-R5
-R6
-R15
-R16
-R17
-L0 2
-R10
-r1
-31
-R18
 R19
-R20
-R14
-!s100 o3ncm3I`J[BM852OJL55C0
 !i10b 1
+Z67 !s100 o3ncm3I`J[BM852OJL55C0
+Z68 IS1O23UbU@WF3U>Yj@>VHV3
+R22
+R23
+R47
+R48
+R49
+L0 2
+R28
+r1
 !s85 0
+31
+R50
+R51
+R52
 !i111 0
+R32
 vtest_second_module_tb
-I9L58^lGN95DENRkho`zJe2
-R5
-R6
-w1711658425
-8C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v
-FC:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v
+Z69 I9L58^lGN95DENRkho`zJe2
+R22
+R23
+Z70 w1711658425
+Z71 8C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v
+Z72 FC:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v
 L0 43
-R10
+R28
 r1
 31
-R14
-!s90 -reportprogress|300|-work|work|-vopt|C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v|
-!s107 C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v|
-!s110 1711658438
-!s100 d5iMM0V;_cFDX4??iCgLT3
-!s108 1711658438.593000
+R32
+Z73 !s90 -reportprogress|300|-work|work|-vopt|C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v|
+Z74 !s107 C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\tb_module_clock_century.v|
+Z75 !s110 1711658438
+Z76 !s100 d5iMM0V;_cFDX4??iCgLT3
+Z77 !s108 1711658438.593000
 !i10b 1
 !s85 0
 !i111 0
 vtop_bcd6bits
-R4
-IW:1=F5Z2P:S6YC_kalEYZ3
-R5
-R6
-R15
-R16
-R17
+R19
+!i10b 1
+Z78 !s100 g[m1HT6YRL1O>gQDCY[P40
+Z79 IW:1=F5Z2P:S6YC_kalEYZ3
+R22
+R23
+R47
+R48
+R49
 L0 32
-R10
+R28
 r1
-31
-R18
-R19
-R20
-R14
-!s100 g[m1HT6YRL1O>gQDCY[P40
-!i10b 1
 !s85 0
+31
+R50
+R51
+R52
 !i111 0
+R32
 vtop_Display7seg
-R4
-I:kP2bzcA3n5ilUAXmU@mG1
-R5
-R6
-R15
-R16
-R17
-L0 125
-R10
-r1
-31
-R18
 R19
-R20
-R14
-ntop_@display7seg
-!s100 8DF=j:d1e@C7Y41W1^`UJ0
 !i10b 1
+Z80 !s100 8DF=j:d1e@C7Y41W1^`UJ0
+Z81 I:kP2bzcA3n5ilUAXmU@mG1
+R22
+R23
+R47
+R48
+R49
+Z82 L0 125
+R28
+r1
 !s85 0
+31
+R50
+R51
+R52
 !i111 0
+R32
+Z83 ntop_@display7seg

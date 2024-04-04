@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY module_clock_century
+set_global_assignment -name TOP_LEVEL_ENTITY test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:03:52  MARCH 29, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -111,13 +111,14 @@ set_location_assignment PIN_AH19 -to tend_h[3]
 set_location_assignment PIN_AG19 -to tend_h[4]
 set_location_assignment PIN_AF18 -to tend_h[5]
 set_location_assignment PIN_AH18 -to tend_h[6]
-set_global_assignment -name VERILOG_FILE module_clock_century.v
-set_global_assignment -name VERILOG_FILE test.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_M23 -to rst
+set_global_assignment -name VERILOG_FILE version_1.2/test.v
+set_global_assignment -name VERILOG_FILE version_1.2/fsm_state_handler.v
+set_global_assignment -name VERILOG_FILE version_1.2/fsm_mode.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_Y2 -to clk
-set_location_assignment PIN_M23 -to rst
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
