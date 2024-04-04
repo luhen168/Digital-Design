@@ -2,8 +2,8 @@ module cnt_mo (
     input clk,
     input rst,
     input pulse_1mo,
-    input increase_mo, decrease_mo, enable_cnt_mo;
-    output wire [5:0] cnt_mo, // var type net is wire 
+    input increase_mo, decrease_mo, enable_cnt_mo,
+    output [5:0] cnt_mo, // var type net is wire 
     output pulse_1y
 );
 
@@ -12,16 +12,15 @@ module cnt_mo (
     always @(posedge clk or negedge rst) begin
         if (~rst) begin
             mo_counter <= 6'd1;
-            cnt_mo <= 0;
         end else begin
             if(pulse_1mo & enable_cnt_mo) begin
                 if (mo_counter == 6'd12) mo_counter <= 6'd1; // Reset hour_counter when it = 23
                 else mo_counter <= mo_counter + 1;
-            end else ( enable_cnt_mo == 0) begin
+            end else if ( enable_cnt_mo == 0) begin
                 if (increase_mo == 1) begin 
                     if (mo_counter == 6'd12) mo_counter <= 6'd1;
                     else mo_counter <= mo_counter + 1;
-                end else (decrease_mo) begin
+                end else if (decrease_mo) begin
                     if (mo_counter == 6'd1) mo_counter <= 6'd12;
                     else mo_counter <= mo_counter - 1;
                 end 

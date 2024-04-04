@@ -11,7 +11,7 @@ module century_clock (
     wire [5:0] increase_signal, decrease_signal;
     wire [5:0] enable_display, enable_cnt;
 
-    button_detect button_detect (
+    button_detect inst_button_detect (
         .clk(clk),
         .rst(rst),
         .increase_button(increase_button),
@@ -20,7 +20,7 @@ module century_clock (
         .decrease_signal(decrease_signal)
     );
 
-    fsm fsm(
+    fsm inst_fsm(
         .clk(clk),
         .rst(rst),
         .mode_button(mode_button),
@@ -29,7 +29,7 @@ module century_clock (
         .enable_pulse_1s(enable_pulse_1s)
     );
 
-    control control(
+    control inst_control(
         .clk(clk),
         .rst(rst),
         .enable_pulse_1s(enable_pulse_1s), 
@@ -38,7 +38,6 @@ module century_clock (
         .decrease_signal(decrease_signal),
         .enable_display(enable_display),
         .enable_cnt(enable_cnt),
-        .enable_pulse_1s(enable_pulse_1s),
         .FPGA_led_1(FPGA_led_1), 
         .FPGA_led_2(FPGA_led_2), 
         .FPGA_led_3(FPGA_led_3), 

@@ -6,7 +6,6 @@ module control (
 	input [5:0] increase_signal, decrease_signal,
     input [5:0] enable_display,
     input [5:0] enable_cnt,
-    input [1:0] enable_pulse_1s,
     output [7:0] FPGA_led_1, FPGA_led_2, FPGA_led_3, FPGA_led_4, FPGA_led_5, FPGA_led_6, FPGA_led_7, FPGA_led_8
 );
 	wire pulse_1s;
@@ -21,7 +20,7 @@ module control (
     wire [3:0] unit_y_thousand_hundred, ten_y_thousand_hundred;
     wire [7:0] FPGA_led_12, FPGA_led_34, FPGA_led_56, FPGA_led_78;
 
-	pulse_1s pulse_1s (
+	pulse_1s inst_pulse_1s (
 		.clk(clk),
 		.rst(rst),
     	.enable_pulse_1s(enable_pulse_1s),
@@ -72,7 +71,7 @@ module control (
 	   	.cnt_d(cnt_d),
 	   	.cnt_mo(cnt_mo),
 		.cnt_y_ten_unit(cnt_y_ten_unit), 
-		.cnt_y_thousand_hundred(cnt_y_thousand_hundred)
+		.cnt_y_thousand_hundred(cnt_y_thousand_hundred),
 		.unit_s(unit_s),
 		.unit_mi(unit_mi), 
 	    .unit_h(unit_h),
@@ -90,7 +89,7 @@ module control (
 	);
 
 
-	control_display_switch display_switch(
+	control_display_switch inst_display_switch(
 		.display_switch(display_switch),
 		.led_s({ten_s, unit_s}),
 		.led_mi({ten_mi, unit_mi}), 
@@ -105,7 +104,7 @@ module control (
 		.FPGA_led_78(FPGA_led_78)
 	);
 
-	control_display7seg display(
+	control_display_7seg display(
 		.in_top({FPGA_led_12[7:4], FPGA_led_12[3:0], FPGA_led_34[7:4], FPGA_led_34[3:0], FPGA_led_56[7:4], FPGA_led_56[3:0], FPGA_led_78[7:4], FPGA_led_78[3:0]}),
 		.out_top({FPGA_led_1[6:0], FPGA_led_2[6:0], FPGA_led_3[6:0], FPGA_led_4[6:0], FPGA_led_5[6:0], FPGA_led_6[6:0], FPGA_led_7[6:0], FPGA_led_8[6:0]})
 	);

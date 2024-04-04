@@ -6,56 +6,56 @@ module control_bcd(
     input [6:0] cnt_y_ten_unit, cnt_y_thousand_hundred,	// Input BCD 7-bits
     output [3:0] unit_s, ten_s,							// Output 4-bits
     output [3:0] unit_mi, ten_mi,
-    output [3:0] unit_h, ten_h
+    output [3:0] unit_h, ten_h,
     output [3:0] unit_d, ten_d,
-    output [3:0] unit_mo, ten_mo
+    output [3:0] unit_mo, ten_mo,
     output [3:0] unit_y_ten_unit, ten_y_ten_unit,
     output [3:0] unit_y_thousand_hundred, ten_y_thousand_hundred
 );
 
-	led_s ints_second (         		
+	bcd led_s (         		
 		.enable_display(enable_s),
 		.cnt(cnt_s),
 		.unit(unit_s),
 		.ten(ten_s)
 	);
 
-	led_mi ints_minute (				// sub module in top
+	bcd led_mi (				// sub module in top
 		.enable_display(enable_mi),
 		.cnt(cnt_mi),
 		.unit(unit_mi),
 		.ten(ten_mi)
 	);
 
-	led_h ints_hour (				// sub module in top
+	bcd led_h (				// sub module in top
 		.enable_display(enable_h),
 		.cnt(cnt_h),
 		.unit(unit_h),
 		.ten(ten_h)		
 	);
 
-	led_d ints_d (
+	bcd led_d (
 		.enable_display(enable_d),
 		.cnt(cnt_d),
 		.unit(unit_d),
 		.ten(ten_d)
     );
 
-	led_mo ints_mo (
+	bcd led_mo (
 		.enable_display(enable_mo),
 		.cnt(cnt_mo),
 		.unit(unit_mo),
 		.ten(ten_mo)
     );
 
-	led_y_ten_unit ints_y (
+	bcd led_y_ten_unit (
 		.enable_display(enable_y),
 		.cnt(cnt_y_ten_unit),
 		.unit(unit_y_ten_unit),
 		.ten(ten_y_ten_unit)
     );
 
-    led_y_thousand_hundred ints_y (
+   bcd led_y_thousand_hundred (
 		.enable_display(enable_y),
 		.cnt(cnt_y_thousand_hundred),
 		.unit(unit_y_thousand_hundred),
@@ -80,7 +80,7 @@ module bcd(
 	        if (bcd[3:0] >= 5) bcd[3:0] = bcd[3:0] + 3;		//If any BCD digit is >= 5, add three
 			if (bcd[7:4] >= 5) bcd[7:4] = bcd[7:4] + 3;
 
-			bcd = {bcd[6:0],bin[5-i]};				//Shift one bit, and shift in proper bit from input 
+			bcd = {bcd[6:0],cnt[5-i]};				//Shift one bit, and shift in proper bit from input 
 	    end
 	end
     assign unit = enable_display ? bcd[3:0] : 4'b1111;

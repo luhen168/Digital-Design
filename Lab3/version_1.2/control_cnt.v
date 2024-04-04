@@ -7,15 +7,15 @@ module control_cnt (
     input increase_h, decrease_h, enable_cnt_h,
     input increase_d, decrease_d, enable_cnt_d,
     input increase_mo, decrease_mo, enable_cnt_mo,
-   	input increase_y, decrease_y, enable_cnt_y,
+	input increase_y, decrease_y, enable_cnt_y,
     output [5:0] cnt_s, cnt_mi, cnt_h, cnt_d, cnt_mo,
-    output [6:0] cnt_y_ten_unit, cnt_y_thousand_hundred,
+    output [6:0] cnt_y_ten_unit, cnt_y_thousand_hundred
 );
     wire pulse_1mi, pulse_1h, pulse_1d, pulse_1mo, pulse_1y;
     wire pulse_increase, pulse_decrease;
 
     // Connect to modules counter ss,mm,hh- dd,mm,yy 
-    cnt_s cnt_s (
+    cnt_s inst_cnt_s (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_s(enable_cnt_s),
@@ -26,7 +26,7 @@ module control_cnt (
         .cnt_s(cnt_s)
     );
 
-    cnt_mi cnt_mi (
+    cnt_mi inst_cnt_mi (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_mi(enable_cnt_mi),
@@ -37,18 +37,18 @@ module control_cnt (
         .cnt_mi(cnt_mi)
     );
 
-    cnt_h cnt_h (
+    cnt_h inst_cnt_h (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_h(enable_cnt_h),
         .pulse_1h(pulse_1h),
         .increase_h(increase_h),
         .decrease_h(decrease_h),
-        .pulse_1d (pulse_1d)
+        .pulse_1d (pulse_1d),
         .cnt_h(cnt_h)
     );
 
-    cnt_d cnt_d (
+    cnt_d inst_cnt_d (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_d(enable_cnt_d),
@@ -61,7 +61,7 @@ module control_cnt (
         .cnt_d(cnt_d)
     );
 
-    cnt_mo cnt_mo (
+    cnt_mo inst_cnt_mo (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_mo(enable_cnt_mo),
@@ -72,7 +72,7 @@ module control_cnt (
         .cnt_mo(cnt_mo)
     );
 
-    cnt_y_ten_unit cnt_y_ten_unit (
+    cnt_y_ten_unit inst_cnt_y_ten_unit (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_y(enable_cnt_y),
@@ -84,7 +84,7 @@ module control_cnt (
         .cnt_y_ten_unit(cnt_y_ten_unit)
     );
 
-    cnt_y_thousand_hundred cnt_y_thousand_hundred (
+    cnt_y_thousand_hundred inst_cnt_y_thousand_hundred (
         .clk(clk),
 		.rst(rst),
         .enable_cnt_y(enable_cnt_y),

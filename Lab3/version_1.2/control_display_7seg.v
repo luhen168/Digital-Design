@@ -1,5 +1,5 @@
 // Module Top Display 7seg
-module display7_seg(
+module control_display_7seg(
 	input [31:0] in_top,    		// bit msb trong so ben trai, [msb:lsb]
 	output [55:0] out_top
 );
