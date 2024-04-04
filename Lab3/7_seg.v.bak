@@ -1,8 +1,0 @@
-module 7_seg(
-	input [13:0]  bin,
-	output [13:0]  display
-);
-
-	assign display [6:0] = input [6:0] bin;
-	assign display [13:7] = input [13:7] bin;
-endmodule 	
