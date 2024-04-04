@@ -10,7 +10,12 @@ module main (
     input enable_cnt_mi,
     input increase_mi, decrease_mi,
     output [5:0] cnt_mi,
-    output pulse_1h
+    output pulse_1h,
+
+    input enable_cnt_h,
+    input increase_h, decrease_h,
+    output [5:0] cnt_h,
+    output pulse_1d
 );
     
     pulse_1s inst_pulse_1s (
@@ -40,6 +45,17 @@ module main (
         .enable_cnt_mi(enable_cnt_mi),
         .cnt_mi(cnt_mi),
         .pulse_1h(pulse_1h)
+    );
+
+    cnt_h inst_cnt_h (
+        .clk(clk), 
+        .rst(rst), 
+        .pulse_1h(pulse_1h),
+        .increase_h(increase_h),
+        .decrease_h(decrease_h),
+        .enable_cnt_h(enable_cnt_h),
+        .cnt_h(cnt_h),
+        .pulse_1d(pulse_1d)
     );
 
 endmodule

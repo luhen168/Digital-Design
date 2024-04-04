@@ -17,6 +17,12 @@ module main_tb;
     wire [5:0] cnt_mi;
     wire pulse_1h;
 
+    reg increase_h;
+    reg decrease_h;
+    reg enable_cnt_h;
+    wire [5:0] cnt_h;
+    wire pulse_1d;
+
     // Instantiate the Unit Under Test (UUT)
     main uut (
         .clk(clk), 
@@ -33,7 +39,13 @@ module main_tb;
         .decrease_mi(decrease_mi),
         .enable_cnt_mi(enable_cnt_mi),
         .cnt_mi(cnt_mi),
-        .pulse_1h(pulse_1h)
+        .pulse_1h(pulse_1h),
+
+        .increase_h(increase_h),
+        .decrease_h(decrease_h),
+        .enable_cnt_h(enable_cnt_h),
+        .cnt_h(cnt_h),
+        .pulse_1d(pulse_1d)
     );
 
     initial begin
@@ -48,7 +60,11 @@ module main_tb;
 
         increase_mi = 0;
         decrease_mi = 0;
-        enable_cnt_mi = 0;
+        enable_cnt_mi = 1;
+
+        increase_h = 0;
+        decrease_h = 0;
+        enable_cnt_h = 1;
 
         // Wait for 100 ns for global reset to finish
         #100;
@@ -58,21 +74,21 @@ module main_tb;
         #100;
         
         // First 1000ns: enable = 0, increase and decrease varies
-        enable_cnt_mi = 0;
-        increase_mi = 1;
-        decrease_mi = 0;
+        enable_cnt_h = 0;
+        increase_h = 1;
+        decrease_h = 0;
         repeat(10) begin
             #100;
-            increase_mi = ~increase_mi;
-            decrease_mi = ~decrease_mi;
+            increase_h = ~increase_h;
+            decrease_h = ~decrease_h;
         end
 
         // Next 1000ns: enable = 1, increase and decrease varies
-        enable_cnt_mi = 1;
+        enable_cnt_h = 1;
         repeat(10) begin
             #100;
-            increase_mi = ~increase_mi;
-            decrease_mi = ~decrease_mi;
+            increase_h = ~increase_h;
+            decrease_h = ~decrease_h;
         end
     end
       
