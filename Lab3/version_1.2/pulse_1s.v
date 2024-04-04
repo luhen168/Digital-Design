@@ -1,14 +1,14 @@
 module pulse_1s (
     input clk,
-    input enable_pulse_1s,
     input rst,
+    input enable_pulse_1s,
     output reg pulse_1s
 );
     // localparam divider = 49999999;
     // localparam divider = 199999;
     localparam divider = 2;
 
-    reg [31:0] counter;
+    reg [25:0] counter;
 
     always @(posedge clk or negedge rst)begin
         if (~rst) begin      
