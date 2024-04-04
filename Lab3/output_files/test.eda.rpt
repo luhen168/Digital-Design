@@ -1,6 +1,6 @@
 EDA Netlist Writer report for test
-Thu Apr 04 17:24:35 2024
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Thu Apr  4 20:25:59 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -17,28 +17,29 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Apr 04 17:24:35 2024 ;
+; EDA Netlist Writer Status ; Successful - Thu Apr  4 20:25:59 2024 ;
 ; Revision Name             ; test                                  ;
-; Top-level Entity Name     ; century_clock                         ;
+; Top-level Entity Name     ; control                               ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -50,8 +51,7 @@ applicable agreement for further details.
 ; Option                                                                                            ; Setting             ;
 +---------------------------------------------------------------------------------------------------+---------------------+
 ; Tool Name                                                                                         ; QuestaSim (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; Off                 ;
-; Time scale                                                                                        ; 1 ps                ;
+; Generate functional simulation netlist                                                            ; On                  ;
 ; Truncate long hierarchy paths                                                                     ; Off                 ;
 ; Map illegal HDL characters                                                                        ; Off                 ;
 ; Flatten buses into individual nodes                                                               ; Off                 ;
@@ -66,42 +66,29 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                     ;
-+------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                ;
-+------------------------------------------------------------------------------------------------+
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_7_1200mv_85c_slow.vo     ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_7_1200mv_0c_slow.vo      ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_min_1200mv_0c_fast.vo    ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test.vo                       ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_7_1200mv_85c_v_slow.sdo  ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_7_1200mv_0c_v_slow.sdo   ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/test_v.sdo                    ;
-+------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D:/OneDrive - Hanoi University of Science and Technology/Documents/HUST/EDABK/DigitalDesign/Assignment/DigitalDesign_LeThanhLuan/Lab3/simulation/questa/test.vo ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 04 17:24:27 2024
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu Apr  4 20:25:57 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off century_clock -c test
-Info (204019): Generated file test_7_1200mv_85c_slow.vo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test_7_1200mv_0c_slow.vo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test_min_1200mv_0c_fast.vo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test.vo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test_7_1200mv_85c_v_slow.sdo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test_7_1200mv_0c_v_slow.sdo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test_min_1200mv_0c_v_fast.sdo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file test_v.sdo in folder "C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4539 megabytes
-    Info: Processing ended: Thu Apr 04 17:24:35 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file test.vo in folder "D:/OneDrive - Hanoi University of Science and Technology/Documents/HUST/EDABK/DigitalDesign/Assignment/DigitalDesign_LeThanhLuan/Lab3/simulation/questa/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Thu Apr  4 20:25:59 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

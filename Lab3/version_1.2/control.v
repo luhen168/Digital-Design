@@ -1,12 +1,12 @@
 module control (
 	input clk,
 	input rst,
-	input enable_pulse_1s, 
+	//input enable_pulse_1s, 
 	input display_switch,
 	input [5:0] increase_signal, decrease_signal,
-    input [5:0] enable_display,
-    input [5:0] enable_cnt,
-    output [7:0] FPGA_led_1, FPGA_led_2, FPGA_led_3, FPGA_led_4, FPGA_led_5, FPGA_led_6, FPGA_led_7, FPGA_led_8
+    //input [5:0] enable_display,
+    //input [5:0] enable_cnt,
+    output [6:0] FPGA_led_1, FPGA_led_2, FPGA_led_3, FPGA_led_4, FPGA_led_5, FPGA_led_6, FPGA_led_7, FPGA_led_8
 );
 	wire pulse_1s;
 	wire [5:0] cnt_s, cnt_mi, cnt_h, cnt_d, cnt_mo;
@@ -19,6 +19,11 @@ module control (
     wire [3:0] unit_y_ten_unit, ten_y_ten_unit;
     wire [3:0] unit_y_thousand_hundred, ten_y_thousand_hundred;
     wire [7:0] FPGA_led_12, FPGA_led_34, FPGA_led_56, FPGA_led_78;
+
+	localparam enable_pulse_1s = 1'b1;
+	localparam [5:0] enable_display = 1'b111111;
+	localparam [5:0] enable_cnt = 1'b111111;
+
 
 	pulse_1s inst_pulse_1s (
 		.clk(clk),

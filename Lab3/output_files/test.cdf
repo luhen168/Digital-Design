@@ -1,10 +1,10 @@
-/* Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition */
+/* Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/output_files/") File("test.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("D:/OneDrive - Hanoi University of Science and Technology/Documents/HUST/EDABK/DigitalDesign/Assignment/DigitalDesign_LeThanhLuan/Lab3/output_files/") File("test.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -80,7 +80,7 @@ module bcd(
 	        if (bcd[3:0] >= 5) bcd[3:0] = bcd[3:0] + 3;		//If any BCD digit is >= 5, add three
 			if (bcd[7:4] >= 5) bcd[7:4] = bcd[7:4] + 3;
 
-			bcd = {bcd[6:0],cnt[5-i]};				//Shift one bit, and shift in proper bit from input 
+			bcd = {bcd[6:0],cnt[6-i]};				//Shift one bit, and shift in proper bit from input 
 	    end
 	end
     assign unit = enable_display ? bcd[3:0] : 4'b1111;

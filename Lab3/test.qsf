@@ -38,10 +38,10 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY century_clock
+set_global_assignment -name TOP_LEVEL_ENTITY control
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:03:52  MARCH 29, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -73,6 +73,67 @@ set_global_assignment -name VERILOG_FILE version_1.2/cnt_d.v
 set_global_assignment -name VERILOG_FILE version_1.2/cnt_button_press.v
 set_global_assignment -name VERILOG_FILE version_1.2/century_clock.v
 set_global_assignment -name VERILOG_FILE version_1.2/button_detect.v
+set_location_assignment PIN_M21 -to mode_button
+set_location_assignment PIN_N21 -to decrease_button
+set_location_assignment PIN_R24 -to increase_button
+set_location_assignment PIN_AB28 -to display_switch
+set_location_assignment PIN_G18 -to FPGA_led_8[0]
+set_location_assignment PIN_F22 -to FPGA_led_8[1]
+set_location_assignment PIN_E17 -to FPGA_led_8[2]
+set_location_assignment PIN_L26 -to FPGA_led_8[3]
+set_location_assignment PIN_L25 -to FPGA_led_8[4]
+set_location_assignment PIN_J22 -to FPGA_led_8[5]
+set_location_assignment PIN_H22 -to FPGA_led_8[6]
+set_location_assignment PIN_M24 -to FPGA_led_7[0]
+set_location_assignment PIN_Y22 -to FPGA_led_7[1]
+set_location_assignment PIN_W21 -to FPGA_led_7[2]
+set_location_assignment PIN_W22 -to FPGA_led_7[3]
+set_location_assignment PIN_W25 -to FPGA_led_7[4]
+set_location_assignment PIN_U23 -to FPGA_led_7[5]
+set_location_assignment PIN_U24 -to FPGA_led_7[6]
+set_location_assignment PIN_AA25 -to FPGA_led_6[0]
+set_location_assignment PIN_AA26 -to FPGA_led_6[1]
+set_location_assignment PIN_Y25 -to FPGA_led_6[2]
+set_location_assignment PIN_W26 -to FPGA_led_6[3]
+set_location_assignment PIN_Y26 -to FPGA_led_6[4]
+set_location_assignment PIN_W27 -to FPGA_led_6[5]
+set_location_assignment PIN_W28 -to FPGA_led_6[6]
+set_location_assignment PIN_V21 -to FPGA_led_5[0]
+set_location_assignment PIN_U21 -to FPGA_led_5[1]
+set_location_assignment PIN_AB20 -to FPGA_led_5[2]
+set_location_assignment PIN_AA21 -to FPGA_led_5[3]
+set_location_assignment PIN_AD24 -to FPGA_led_5[4]
+set_location_assignment PIN_AF23 -to FPGA_led_5[5]
+set_location_assignment PIN_Y19 -to FPGA_led_5[6]
+set_location_assignment PIN_AB19 -to FPGA_led_4[0]
+set_location_assignment PIN_AA19 -to FPGA_led_4[1]
+set_location_assignment PIN_AG21 -to FPGA_led_4[2]
+set_location_assignment PIN_AH21 -to FPGA_led_4[3]
+set_location_assignment PIN_AE19 -to FPGA_led_4[4]
+set_location_assignment PIN_AF19 -to FPGA_led_4[5]
+set_location_assignment PIN_AE18 -to FPGA_led_4[6]
+set_location_assignment PIN_AD18 -to FPGA_led_3[0]
+set_location_assignment PIN_AC18 -to FPGA_led_3[1]
+set_location_assignment PIN_AB18 -to FPGA_led_3[2]
+set_location_assignment PIN_AH19 -to FPGA_led_3[3]
+set_location_assignment PIN_AG19 -to FPGA_led_3[4]
+set_location_assignment PIN_AF18 -to FPGA_led_3[5]
+set_location_assignment PIN_AH18 -to FPGA_led_3[6]
+set_location_assignment PIN_AA17 -to FPGA_led_2[0]
+set_location_assignment PIN_AB16 -to FPGA_led_2[1]
+set_location_assignment PIN_AA16 -to FPGA_led_2[2]
+set_location_assignment PIN_AB17 -to FPGA_led_2[3]
+set_location_assignment PIN_AB15 -to FPGA_led_2[4]
+set_location_assignment PIN_AA15 -to FPGA_led_2[5]
+set_location_assignment PIN_AC17 -to FPGA_led_2[6]
+set_location_assignment PIN_AD17 -to FPGA_led_1[0]
+set_location_assignment PIN_AE17 -to FPGA_led_1[1]
+set_location_assignment PIN_AG17 -to FPGA_led_1[2]
+set_location_assignment PIN_AH17 -to FPGA_led_1[3]
+set_location_assignment PIN_AF17 -to FPGA_led_1[4]
+set_location_assignment PIN_AG18 -to FPGA_led_1[5]
+set_location_assignment PIN_AA14 -to FPGA_led_1[6]
+set_location_assignment PIN_AC28 -to enable_pulse_1s
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

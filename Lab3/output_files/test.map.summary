@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Apr 04 17:23:16 2024
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Thu Apr  4 20:25:18 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : test
-Top-level Entity Name : century_clock
+Top-level Entity Name : control
 Family : Cyclone IV E
-Total logic elements : 504
-    Total combinational functions : 502
-    Dedicated logic registers : 185
-Total registers : 185
-Total pins : 70
+Total logic elements : 84
+    Total combinational functions : 84
+    Dedicated logic registers : 39
+Total registers : 39
+Total pins : 71
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

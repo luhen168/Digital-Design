@@ -3,7 +3,7 @@ module cnt_s (
     input rst,
     input pulse_1s,
     input increase_s, decrease_s, enable_cnt_s,
-    output [5:0] cnt_s, // var type net is wire 
+    output [5:0] cnt_s,
     output pulse_1mi 
 );
     reg [5:0] sec_counter;

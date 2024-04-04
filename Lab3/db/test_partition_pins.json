@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FPGA_led_5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_led_6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_switch",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
