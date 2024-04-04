@@ -1,1 +1,86 @@
+C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_switch.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_switch.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module control_display_switch
 
+Top level modules:
+	control_display_switch
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mi.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mi.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_mi
+
+Top level modules:
+	cnt_mi
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/pulse_1s.v {1 {vlog -work work -vopt {C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\pulse_1s.v}
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module pulse_1s
+
+Top level modules:
+	pulse_1s
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_cnt.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_cnt.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module control_cnt
+
+Top level modules:
+	control_cnt
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_s.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_s.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_s
+
+Top level modules:
+	cnt_s
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_d.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_d.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_d
+
+Top level modules:
+	cnt_d
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mo.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mo.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_mo
+
+Top level modules:
+	cnt_mo
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_ten_unit.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_ten_unit.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_y_ten_unit
+
+Top level modules:
+	cnt_y_ten_unit
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/tb_each_module.v {1 {vlog -work work -vopt {C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\tb_each_module.v}
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module tb_each_module
+
+Top level modules:
+	tb_each_module
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_7seg.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_7seg.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module control_display_7seg
+-- Compiling module bin_to_7seg
+
+Top level modules:
+	control_display_7seg
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_thousand_hundred.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_thousand_hundred.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_y_thousand_hundred
+
+Top level modules:
+	cnt_y_thousand_hundred
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_h.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_h.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cnt_h
+
+Top level modules:
+	cnt_h
+
+} {} {}}

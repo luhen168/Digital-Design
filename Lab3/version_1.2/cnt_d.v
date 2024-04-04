@@ -15,8 +15,11 @@ module cnt_d (
         if (~rst) begin
             day_counter <= 6'd1;
         end else begin
-            if((cnt_y_ten_unit[1:0] == 2'b00) & (cnt_mo == 6'd2)) day_total_in_mo <= 5'd29; // kiểm tra hai bit cuối 
-            else begin
+            if((cnt_y_ten_unit[1:0] == 2'b00) & (cnt_mo == 6'd2)) begin
+                day_total_in_mo <= 5'd29; // kiểm tra hai bit cuối 
+                // định sửa vào đây 
+                
+            end else begin
                 case(cnt_mo)
                     6'd1: day_total_in_mo <= 5'd31;
                     6'd2: day_total_in_mo <= 5'd28;
@@ -44,7 +47,7 @@ module cnt_d (
                     else day_counter <= day_counter - 1;
                 end
             end
-			end
+		end
     end
     assign pulse_1mo = (day_counter == day_total_in_mo) & pulse_1d ;
     assign cnt_d = day_counter;

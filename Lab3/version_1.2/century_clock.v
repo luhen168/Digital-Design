@@ -4,7 +4,7 @@ module century_clock (
     input rst,
     input display_switch,                                           // use switch to control
     input mode_button, increase_button, decrease_button,            // use button to control
-    output [7:0] FPGA_led_1, FPGA_led_2, FPGA_led_3, FPGA_led_4, FPGA_led_5, FPGA_led_6, FPGA_led_7, FPGA_led_8      
+    output [13:0] FPGA_led_12, FPGA_led_34, FPGA_led_56, FPGA_led_78      
 );
 
     wire enable_pulse_1s;
@@ -38,14 +38,10 @@ module century_clock (
         .decrease_signal(decrease_signal),
         .enable_display(enable_display),
         .enable_cnt(enable_cnt),
-        .FPGA_led_1(FPGA_led_1), 
-        .FPGA_led_2(FPGA_led_2), 
-        .FPGA_led_3(FPGA_led_3), 
-        .FPGA_led_4(FPGA_led_4), 
-        .FPGA_led_5(FPGA_led_5), 
-        .FPGA_led_6(FPGA_led_6), 
-        .FPGA_led_7(FPGA_led_7), 
-        .FPGA_led_8(FPGA_led_8)
+        .FPGA_led_12(FPGA_led_12),
+        .FPGA_led_34(FPGA_led_34), 
+        .FPGA_led_56(FPGA_led_56), 
+        .FPGA_led_78(FPGA_led_78)
     );
 endmodule    
    

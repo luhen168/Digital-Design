@@ -54,14 +54,37 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_M23 -to rst
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AD17 -to FPGA_led_1[0]
+set_location_assignment PIN_AE17 -to FPGA_led_1[1]
+set_location_assignment PIN_AG17 -to FPGA_led_1[2]
+set_location_assignment PIN_AH17 -to FPGA_led_1[3]
+set_location_assignment PIN_AF17 -to FPGA_led_1[4]
+set_location_assignment PIN_AG18 -to FPGA_led_1[5]
+set_location_assignment PIN_AA14 -to FPGA_led_1[6]
+set_location_assignment PIN_AA17 -to FPGA_led_2[0]
+set_location_assignment PIN_AB16 -to FPGA_led_2[1]
+set_location_assignment PIN_AA16 -to FPGA_led_2[2]
+set_location_assignment PIN_AB17 -to FPGA_led_2[3]
+set_location_assignment PIN_AB15 -to FPGA_led_2[4]
+set_location_assignment PIN_AA15 -to FPGA_led_2[5]
+set_location_assignment PIN_AC17 -to FPGA_led_2[6]
+set_location_assignment PIN_AD18 -to FPGA_led_3[0]
+set_location_assignment PIN_AH18 -to FPGA_led_3[6]
+set_location_assignment PIN_AF18 -to FPGA_led_3[5]
+set_location_assignment PIN_AG19 -to FPGA_led_3[4]
+set_location_assignment PIN_AH19 -to FPGA_led_3[3]
+set_location_assignment PIN_AB18 -to FPGA_led_3[2]
+set_location_assignment PIN_AC18 -to FPGA_led_3[1]
 set_global_assignment -name VERILOG_FILE version_1.2/pulse_1s.v
 set_global_assignment -name VERILOG_FILE version_1.2/fsm_state_handler.v
 set_global_assignment -name VERILOG_FILE version_1.2/fsm_mode.v
 set_global_assignment -name VERILOG_FILE version_1.2/fsm.v
 set_global_assignment -name VERILOG_FILE version_1.2/control_display_switch.v
-set_global_assignment -name VERILOG_FILE version_1.2/control_display_7seg.v
+set_global_assignment -name VERILOG_FILE version_1.2/control_decode_7seg.v
 set_global_assignment -name VERILOG_FILE version_1.2/control_cnt.v
-set_global_assignment -name VERILOG_FILE version_1.2/control_bcd.v
 set_global_assignment -name VERILOG_FILE version_1.2/control.v
 set_global_assignment -name VERILOG_FILE version_1.2/cnt_y_thousand_hundred.v
 set_global_assignment -name VERILOG_FILE version_1.2/cnt_y_ten_unit.v
@@ -73,7 +96,4 @@ set_global_assignment -name VERILOG_FILE version_1.2/cnt_d.v
 set_global_assignment -name VERILOG_FILE version_1.2/cnt_button_press.v
 set_global_assignment -name VERILOG_FILE version_1.2/century_clock.v
 set_global_assignment -name VERILOG_FILE version_1.2/button_detect.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
