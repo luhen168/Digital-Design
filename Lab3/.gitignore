@@ -1,0 +1,18 @@
+incremental_db
+output_files
+simulation
+test sig1s
+version_1.1
+work
+
+*.bak
+*.mti
+*.mpf
+*.dpf
+*.qsf
+*.qws
+*.ddb
+*.dio
+*.vstf
+*.wlf
+*.svg
