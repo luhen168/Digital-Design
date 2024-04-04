@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="seconds[0]" source="Pin Planner" >
+		</pin>
+		<pin name="seconds[1]" source="Pin Planner" >
+		</pin>
+		<pin name="seconds[2]" source="Pin Planner" >
+		</pin>
+		<pin name="seconds[3]" source="Pin Planner" >
+		</pin>
+		<pin name="seconds[4]" source="Pin Planner" >
+		</pin>
+		<pin name="seconds[5]" source="Pin Planner" >
+		</pin>
+		<pin name="minutes[0]" source="Pin Planner" >
+		</pin>
+		<pin name="minutes[1]" source="Pin Planner" >
+		</pin>
+		<pin name="minutes[2]" source="Pin Planner" >
+		</pin>
+		<pin name="minutes[3]" source="Pin Planner" >
+		</pin>
+		<pin name="minutes[4]" source="Pin Planner" >
+		</pin>
+		<pin name="minutes[5]" source="Pin Planner" >
+		</pin>
+		<pin name="hours[0]" source="Pin Planner" >
+		</pin>
+		<pin name="hours[1]" source="Pin Planner" >
+		</pin>
+		<pin name="hours[2]" source="Pin Planner" >
+		</pin>
+		<pin name="hours[3]" source="Pin Planner" >
+		</pin>
+		<pin name="hours[4]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[0]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[1]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[2]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[3]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[4]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[5]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_s[6]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[0]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[1]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[2]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[3]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[4]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[5]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_m[6]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[0]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[1]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[2]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[3]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[4]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[5]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_s[6]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[0]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[1]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[2]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[3]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[4]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[5]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_m[6]" source="Pin Planner" >
+		</pin>
+		<pin name="hours[5]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[0]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[1]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[2]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[3]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[4]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[5]" source="Pin Planner" >
+		</pin>
+		<pin name="unitd_h[6]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[0]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[1]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[2]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[3]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[4]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[5]" source="Pin Planner" >
+		</pin>
+		<pin name="tend_h[6]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>
