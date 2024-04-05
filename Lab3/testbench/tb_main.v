@@ -26,11 +26,11 @@ module main_tb;
     reg increase_d;
     reg decrease_d;
     reg enable_cnt_d;
-    wire [5:0] cnt_d;
-    wire pulse_1mo;
     reg [6:0] cnt_y_ten_unit;
     reg [6:0] cnt_mo;
-    wire day_total_in_mo;
+    wire [5:0] cnt_d;
+    wire pulse_1mo;
+    wire [5:0] day_total_in_mo;
 
     // Instantiate the Unit Under Test (UUT)
     main uut (
@@ -56,13 +56,13 @@ module main_tb;
         .cnt_h(cnt_h),
         .pulse_1d(pulse_1d),
 
-        .increase_d(increase_d),
-        .decrease_d(decrease_d),
-        .enable_cnt_d(enable_cnt_d),
-        .cnt_d(cnt_d),
-        .pulse_1mo(pulse_1mo),
-        .cnt_y_ten_unit(cnt_y_ten_unit),
-        .cnt_mo(cnt_mo),
+        .increase_d(increase_d), 
+        .decrease_d(decrease_d), 
+        .enable_cnt_d(enable_cnt_d), 
+        .cnt_y_ten_unit(cnt_y_ten_unit), 
+        .cnt_mo(cnt_mo), 
+        .cnt_d(cnt_d), 
+        .pulse_1mo(pulse_1mo), 
         .day_total_in_mo(day_total_in_mo)
     );
 
@@ -99,22 +99,22 @@ module main_tb;
         #100;
         
         // First 1000ns: enable = 0, increase and decrease varies
-        enable_cnt_d = 0;
-        increase_d = 1;
-        decrease_d = 0;
-        repeat(10) begin
-            #100;
-            increase_d = ~increase_d;
-            decrease_d = ~decrease_d;
-        end
+        // enable_cnt_d = 0;
+        // increase_d = 1;
+        // decrease_d = 0;
+        // repeat(10) begin
+        //     #100;
+        //     increase_d = ~increase_d;
+        //     decrease_d = ~decrease_d;
+        // end
 
-        // Next 1000ns: enable = 1, increase and decrease varies
-        enable_cnt_d = 1;
-        repeat(10) begin
-            #100;
-            increase_d = ~increase_d;
-            decrease_d = ~decrease_d;
-        end
+        // // Next 1000ns: enable = 1, increase and decrease varies
+        // enable_cnt_d = 1;
+        // repeat(10) begin
+        //     #100;
+        //     increase_d = ~increase_d;
+        //     decrease_d = ~decrease_d;
+        // end
     end
       
     // Clock generator

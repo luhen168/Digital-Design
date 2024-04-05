@@ -19,10 +19,10 @@ module main (
 
     input enable_cnt_d,
     input increase_d, decrease_d,
-    output [5:0] cnt_d,
-    output pulse_1mo,
     input [6:0] cnt_y_ten_unit, cnt_mo,
-    output day_total_in_mo
+    output [5:0] day_total_in_mo,
+    output [5:0] cnt_d,
+    output pulse_1mo
 );
     
     pulse_1s inst_pulse_1s (
@@ -68,12 +68,14 @@ module main (
     cnt_d inst_cnt_d (
         .clk(clk), 
         .rst(rst), 
-        .pulse_1d(pulse_1d),
-        .increase_d(increase_d),
-        .decrease_d(decrease_d),
-        .enable_cnt_d(enable_cnt_d),
-        .cnt_d(cnt_d),
-        .pulse_1mo(pulse_1mo),
+        .pulse_1d(pulse_1d), 
+        .increase_d(increase_d), 
+        .decrease_d(decrease_d), 
+        .enable_cnt_d(enable_cnt_d), 
+        .cnt_y_ten_unit(cnt_y_ten_unit), 
+        .cnt_mo(cnt_mo), 
+        .cnt_d(cnt_d), 
+        .pulse_1mo(pulse_1mo), 
         .day_total_in_mo(day_total_in_mo)
     );
 
