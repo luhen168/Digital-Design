@@ -5,8 +5,8 @@ module pulse_1s (
     output reg pulse_1s
 );
     // localparam divider = 49999999;
-    // localparam divider = 199999;
-    localparam divider = 19;
+    localparam divider = 19999;
+    // localparam divider = 19;
 
     reg [31:0] counter;
 

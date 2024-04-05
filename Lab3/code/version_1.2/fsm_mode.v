@@ -5,7 +5,7 @@ module fsm_mode(
     output reg [2:0] state
 );
     
-    reg [3:0] state_next;
+    reg [2:0] state_next;
 
     localparam NORMAL = 3'b000;
     localparam SS = 3'b001;
@@ -15,7 +15,7 @@ module fsm_mode(
     localparam MO = 3'b101;
     localparam YY = 3'b110;
 
-    always @(mode_button or state) begin 
+    always @(posedge mode_button ) begin 
         case(state)
             NORMAL: 
                 if(mode_button) state_next = SS;
@@ -38,14 +38,14 @@ module fsm_mode(
             YY: 
                 if(mode_button) state_next = NORMAL;
                 else state_next = YY;
-            default: state_next = state;
+            default: state_next = NORMAL;
         endcase
     end 
 
 
     always@(posedge clk or negedge rst) begin 
         if(~rst)
-          state <= 0;
+           state <= NORMAL;
         else 
            state <= state_next; 
     end  

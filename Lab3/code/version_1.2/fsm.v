@@ -7,7 +7,7 @@ module fsm (
     output enable_pulse_1s
 );
 
-    wire [3:0] state;
+    wire [2:0] state;
 
     fsm_mode fsm_mode (
         .clk(clk),

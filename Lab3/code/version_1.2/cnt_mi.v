@@ -15,10 +15,10 @@ module cnt_mi (
                 if (minute_counter == 6'd59) minute_counter <= 6'd0;
                 else minute_counter <= minute_counter + 1;
             end else if(enable_cnt_mi == 0) begin
-                if(increase_mi == 1) begin 
+                if(increase_mi == 0) begin 
                     if (minute_counter == 6'd59) minute_counter <= 6'd0;
                     else minute_counter <= minute_counter + 1;
-                end else if(decrease_mi == 1) begin
+                end else if(decrease_mi == 0) begin
                     if (minute_counter == 0) minute_counter <= 6'd59;
                     else minute_counter <= minute_counter - 1;
                 end

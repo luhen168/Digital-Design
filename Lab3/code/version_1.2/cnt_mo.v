@@ -17,10 +17,10 @@ module cnt_mo (
                 if (mo_counter == 6'd12) mo_counter <= 6'd1; // Reset hour_counter when it = 23
                 else mo_counter <= mo_counter + 1;
             end else if ( enable_cnt_mo == 0) begin
-                if (increase_mo == 1) begin 
+                if (increase_mo == 0) begin 
                     if (mo_counter == 6'd12) mo_counter <= 6'd1;
                     else mo_counter <= mo_counter + 1;
-                end else if (decrease_mo) begin
+                end else if (decrease_mo == 0) begin
                     if (mo_counter == 6'd1) mo_counter <= 6'd12;
                     else mo_counter <= mo_counter - 1;
                 end 

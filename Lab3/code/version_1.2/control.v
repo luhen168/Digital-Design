@@ -9,6 +9,7 @@ module control (
     output [13:0] FPGA_led_12, FPGA_led_34, FPGA_led_56, FPGA_led_78
 );
 	wire pulse_1s;
+	
 	wire [5:0] cnt_s, cnt_mi, cnt_h, cnt_d, cnt_mo;
     wire [6:0] cnt_y_ten_unit, cnt_y_thousand_hundred;
     wire [13:0] led_s, led_y_thousand_hundred;

@@ -39,10 +39,10 @@ module cnt_d (
                 if (day_counter == day_total_in_mo) day_counter <= 6'd1; // Reset hour_counter when it = 23
                 else day_counter <= day_counter + 1;
             end else if(enable_cnt_d == 0) begin
-                if(increase_d == 1) begin 
+                if(increase_d == 0) begin 
                     if (day_counter == day_total_in_mo) day_counter <= 6'd1;
                     else day_counter <= day_counter + 1;
-                end else if(decrease_d == 1) begin
+                end else if(decrease_d == 0) begin
                     if (day_counter == 0) day_counter <= day_total_in_mo;
                     else day_counter <= day_counter - 1;
                 end

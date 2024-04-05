@@ -17,15 +17,17 @@ module cnt_h (
                 if (hour_counter == 6'd23) hour_counter <= 6'd0; // Reset hour_counter when it = 23
                 else hour_counter <= hour_counter + 1;
             end else if(enable_cnt_h == 0) begin
-                if(increase_h == 1) begin 
+                if(increase_h == 0) begin 
                     if (hour_counter == 6'd23) hour_counter <= 6'd0;
                     else hour_counter <= hour_counter + 1;
-                end else if(decrease_h == 1) begin
+                end else if(decrease_h == 0) begin
                     if (hour_counter == 0) hour_counter <= 6'd23;
                     else hour_counter <= hour_counter - 1;
                 end
             end
         end
+
+        
     end
     assign pulse_1d = (hour_counter == 6'd23) & pulse_1h ;
     assign cnt_h = hour_counter;

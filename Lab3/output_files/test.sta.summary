@@ -2,76 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'display_switch'
-Slack : -4.992
-TNS   : -64.324
-
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.363
-TNS   : -626.457
+Slack : -3.629
+TNS   : -539.236
 
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.403
+Type  : Slow 1200mV 85C Model Setup 'mode_button'
+Slack : -0.222
+TNS   : -0.629
+
+Type  : Slow 1200mV 85C Model Hold 'mode_button'
+Slack : 0.264
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'display_switch'
-Slack : 2.922
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -240.725
+TNS   : -239.440
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'display_switch'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mode_button'
 Slack : -3.000
-TNS   : -3.000
-
-Type  : Slow 1200mV 0C Model Setup 'display_switch'
-Slack : -4.442
-TNS   : -57.567
+TNS   : -6.855
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.910
-TNS   : -556.594
+Slack : -3.238
+TNS   : -477.723
 
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.354
+Type  : Slow 1200mV 0C Model Setup 'mode_button'
+Slack : 0.008
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'display_switch'
-Slack : 2.692
+Type  : Slow 1200mV 0C Model Hold 'mode_button'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.339
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -240.725
+TNS   : -239.440
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'display_switch'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mode_button'
 Slack : -3.000
-TNS   : -3.000
-
-Type  : Fast 1200mV 0C Model Setup 'display_switch'
-Slack : -1.934
-TNS   : -24.085
+TNS   : -6.855
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.524
-TNS   : -207.915
+Slack : -1.249
+TNS   : -168.326
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.181
+Type  : Fast 1200mV 0C Model Setup 'mode_button'
+Slack : 0.268
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'display_switch'
-Slack : 1.373
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mode_button'
+Slack : 0.219
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -200.080
+TNS   : -199.827
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'display_switch'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mode_button'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -6.531
 
 ------------------------------------------------------------

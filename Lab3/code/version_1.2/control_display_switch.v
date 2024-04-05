@@ -14,6 +14,7 @@ module control_display_switch (
 	    		FPGA_led_12 = led_h; 
 	    		FPGA_led_34 = led_mi;
 	    		FPGA_led_56 = led_s;
+	    		FPGA_led_78 = 14'b11111111111111;
 				end
 	      1'd1: 
 				begin
