@@ -22,7 +22,12 @@ module main (
     input [6:0] cnt_y_ten_unit, cnt_mo,
     output [5:0] day_total_in_mo,
     output [5:0] cnt_d,
-    output pulse_1mo
+    output pulse_1mo,
+
+    output [13:0] FPGA_led12,
+    output [13:0] FPGA_led34,
+    output [13:0] FPGA_led56,
+    output [13:0] FPGA_led78
 );
     
     pulse_1s inst_pulse_1s (
@@ -79,4 +84,23 @@ module main (
         .day_total_in_mo(day_total_in_mo)
     );
 
+    wire [5:0] enable_display = 6'b111111;
+    led_s inst_led_s (
+        .enable_display(enable_display[0]),
+        .cnt_s({1'b0, cnt_s}),
+        .led_s(FPGA_led56)
+    );
+
+    led_mi inst_led_mi (
+        .enable_display(enable_display[1]),
+        .cnt_mi({1'b0, cnt_mi}),
+        .led_mi(FPGA_led34)
+    );
+
+    led_h inst_led_h (
+        .enable_display(enable_display[2]),
+        .cnt_h({1'b0, cnt_h}),
+        .led_h(FPGA_led12)
+    );
+    
 endmodule

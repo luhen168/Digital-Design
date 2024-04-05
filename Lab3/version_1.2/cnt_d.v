@@ -1,4 +1,4 @@
-module cnt_h (
+module cnt_d (
     input clk,
     input rst,
     input pulse_1d,

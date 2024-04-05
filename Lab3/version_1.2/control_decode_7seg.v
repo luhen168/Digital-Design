@@ -70,7 +70,7 @@ endmodule
 
 // BCD by Doubble Dabble 
 module bcd(
-	input [5:0] enable_display,
+	input enable_display,
    	input [6:0] cnt,
    	output [7:0] led_out
 );
@@ -79,7 +79,7 @@ module bcd(
 	reg [7:0] bcd;
 	always @(cnt) begin
 	    bcd=0;		 	
-	    for (i=0;i<6;i=i+1) begin					//Iterate once for each bit in input number
+	    for (i=0;i<7;i=i+1) begin					//Iterate once for each bit in input number
 	        if (bcd[3:0] >= 5) bcd[3:0] = bcd[3:0] + 3;		//If any BCD digit is >= 5, add three
 			if (bcd[7:4] >= 5) bcd[7:4] = bcd[7:4] + 3;
 
