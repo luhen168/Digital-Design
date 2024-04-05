@@ -2,6 +2,12 @@
 
 <pin_planner>
 	<pin_info>
+		<pin name="increase_signal" source="Pin Planner" >
+		</pin>
+		<pin name="decrease_signal" source="Pin Planner" >
+		</pin>
+		<pin name="enable_pulse_1s" source="Pin Planner" >
+		</pin>
 		<pin name="seconds[0]" source="Pin Planner" >
 		</pin>
 		<pin name="seconds[1]" source="Pin Planner" >

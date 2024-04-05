@@ -3,336 +3,514 @@ K4
 z2
 13
 cModel Technology
-dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
+Z0 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
 !s112 0.1
 !i10d 8192
 !i10e 25
 !i10f 100
 T_opt
-!s110 1712243209
-VhU2SP9KH391W=P@8ZS3CJ1
+VQFYd38=H1a3<c^EP2CJ@L1
 04 14 4 work tb_each_module fast 0
-=5-68f728ba1f7c-660ec209-9d-460
-o-quiet -auto_acc_if_foreign -work work +acc
+=1-68f728ba1f7c-660fad5a-383-6e8
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
 n@_opt
-OL;O;10.2c;57
+Z2 OL;O;10.2c;57
+Z3 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab2
+!s110 1712303451
+T_opt1
+V2EQILG1c6QL0KkJW?hI3[2
+Z4 04 17 4 work tb_control_decode fast 0
+=1-68f728ba1f7c-660fb627-14d-274c
+o-quiet -auto_acc_if_foreign -work work
+n@_opt1
+R2
+R3
+!s110 1712305703
+T_opt2
+!s110 1712307376
+VcK]K:BXUGd4QmMOe4[_`k1
+R4
+=2-68f728ba1f7c-660fbcb0-311-3488
+R1
+n@_opt2
+R2
 vbcd
-Z0 !s110 1712243198
-IaLAc^kgU;mb7SQPNN>[Ii2
-Z1 V`JN@9S9cnhjKRR_L]QIcM3
-Z2 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3
-Z3 w1712238207
-Z4 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v
-Z5 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v
-L0 69
-Z6 OL;L;10.2c;57
+Z5 !s110 1712307368
+I_B=0Aab:USkKcNU>4SmDn0
+Z6 V`JN@9S9cnhjKRR_L]QIcM3
+Z7 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3
+Z8 w1712307058
+Z9 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_decode_7seg.v
+Z10 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_decode_7seg.v
+L0 72
+Z11 OL;L;10.2c;57
 r1
 31
-Z7 !s108 1712243198.295000
-Z8 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v|
-Z9 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v|
-Z10 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s100 PCTdW:=B>lnzFPLe;W2GB1
+Z12 !s108 1712307368.141000
+Z13 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_decode_7seg.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_decode_7seg.v|
+Z15 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 n;=M;aW35oK:HiHAE[SR32
 !i10b 1
 !s85 0
 !i111 0
 vbin_to_7seg
-Z11 !s110 1712243198
-IMz3TgaO7dK:Mj;R6W[82L2
-R1
-R2
-Z12 w1712223180
-Z13 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_7seg.v
-Z14 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_7seg.v
-L0 25
-R6
-r1
-31
-Z15 !s108 1712243198.544000
-Z16 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_7seg.v|
-Z17 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_7seg.v|
-R10
-!s100 nLbBe81D>k7Fm;<gLhAV50
-!i10b 1
-!s85 0
-!i111 0
-vcnt_d
-Z18 !s110 1712243197
-I814VGQU0fjWP=oe_80afj1
-R1
-R2
-w1712225661
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_d.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_d.v
-L0 1
-R6
-r1
-31
-R10
-!s100 FMN3?m<NfjPMI_kSA33UL0
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_d.v|
-!s108 1712243197.436000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_d.v|
-!i10b 1
-!s85 0
-!i111 0
-vcnt_h
-R18
-IP_1YXD59?QBom>D=7j26c2
-R1
-R2
-w1712225763
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_h.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_h.v
-L0 1
-R6
-r1
-31
-R10
-!s100 ZHK=]7QNTb75[bYS3K=1C3
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_h.v|
-!s108 1712243197.547000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_h.v|
-!i10b 1
-!s85 0
-!i111 0
-vcnt_mi
-R18
-Iz`f7<HVzF:a0Eb2aC4i8E0
-R1
-R2
-w1712225857
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mi.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mi.v
-L0 1
-R6
-r1
-31
-R10
-!s100 h4SjlE=f9aZMT91mzl]bc0
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mi.v|
-!s108 1712243197.655000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mi.v|
-!i10b 1
-!s85 0
-!i111 0
-vcnt_mo
-R18
-IM`I;WDG[jk>OPPE7fdB^j3
-R1
-R2
-w1712225533
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mo.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mo.v
-L0 1
-R6
-r1
-31
-R10
-!s100 j2OFd24;meSMBkjJ[zE621
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mo.v|
-!s108 1712243197.770000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_mo.v|
-!i10b 1
-!s85 0
-!i111 0
-vcnt_s
-R18
-IDYWRNSC:]eR^01K=^h[:o3
-R1
-R2
-w1712225524
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_s.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_s.v
-L0 1
-R6
-r1
-31
-R10
-!s100 kAS<Aa=Zmb0T1:8fnIH3`1
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_s.v|
-!s108 1712243197.870000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_s.v|
-!i10b 1
-!s85 0
-!i111 0
-vcnt_y_ten_unit
-IQRhII7Sl1oK^ZCJSNWjjj3
-R1
-R2
-w1712225934
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_ten_unit.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_ten_unit.v
-L0 1
-R6
-r1
-31
-R10
-R11
-!s100 ^o3[WD]^gF5on8V^ZEg[j2
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_ten_unit.v|
-!s108 1712243197.973000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_ten_unit.v|
-!i10b 1
-!s85 0
-!i111 0
-vcnt_y_thousand_hundred
-R11
-I]401cRAkG3C2NYQX2AUiR0
-R1
-R2
-w1712225608
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_thousand_hundred.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_thousand_hundred.v
-L0 1
-R6
-r1
-31
-R10
-!s100 ck:HlGND6XL>mT7bMgH^:2
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_thousand_hundred.v|
-!s108 1712243198.080000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/cnt_y_thousand_hundred.v|
-!i10b 1
-!s85 0
-!i111 0
-vcontrol
-R11
-IX2ZDZCWInkzFEAX9H04dS0
-R1
-R2
-w1712240771
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control.v
-L0 1
-R6
-r1
-31
-R10
-!s100 iJ3i>T7Q>iz3k?zGcQPXo2
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control.v|
-!s108 1712243198.193000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control.v|
-!i10b 1
-!s85 0
-!i111 0
-vcontrol_bcd
-R11
-I4;aOFQELLDI]6o5k?j=T>2
-R1
-R2
-R3
-R4
 R5
-L0 2
+IE@:B3OlEJOn]XE5On4UGo1
 R6
-r1
-31
 R7
 R8
 R9
 R10
+L0 114
+R11
+r1
+31
+R12
+R13
+R14
+R15
+!s100 igFW2jOfDz8g@2oCK:Wzn2
+!i10b 1
+!s85 0
+!i111 0
+vbutton_detect
+R5
+I00l101NH9oSS3BnFOJU1f2
+R6
+R7
+w1712218461
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/button_detect.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/button_detect.v
+L0 1
+R11
+r1
+31
+R15
+!s100 ?NX3h3O@]RMdfM3gzD?nG2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/button_detect.v|
+!s108 1712307368.786000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/button_detect.v|
+!i10b 1
+!s85 0
+!i111 0
+vcentury_clock
+R5
+II`FWC20NE7RO>mhjJCmmn0
+R6
+R7
+w1712289425
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/century_clock.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/century_clock.v
+L0 2
+R11
+r1
+31
+R15
+!s100 N9L3hXjLZc6mI81Ka_1=[3
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/century_clock.v|
+!s108 1712307368.902000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/century_clock.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_button_press
+Ikm6?N`?_HRaE[DMhk_@A53
+R6
+R7
+w1712157843
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_button_press.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_button_press.v
+L0 1
+R11
+r1
+31
+R15
+Z16 !s110 1712307369
+!s100 XO1<2WHY8A2VjA[B2B:R60
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_button_press.v|
+!s108 1712307369.002000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_button_press.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_d
+R16
+IgD^]AimNiCEASm0<ogGCH1
+R6
+R7
+w1712254019
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_d.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_d.v
+L0 1
+R11
+r1
+31
+R15
+!s100 fAoJ6nlP?@[hZWOXFJgc82
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_d.v|
+!s108 1712307369.102000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_d.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_h
+R16
+I`WRR4I6jBB=KAO@Tc@Gz11
+R6
+R7
+w1712225763
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_h.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_h.v
+L0 1
+R11
+r1
+31
+R15
+!s100 ZHK=]7QNTb75[bYS3K=1C3
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_h.v|
+!s108 1712307369.187000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_h.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_mi
+R16
+IN2Dl:TXCLV2nR54Pl_b@R3
+R6
+R7
+w1712225857
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mi.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mi.v
+L0 1
+R11
+r1
+31
+R15
+!s100 h4SjlE=f9aZMT91mzl]bc0
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mi.v|
+!s108 1712307369.287000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mi.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_mo
+R16
+Ic[QPjn4BN?24mk<mkRZ@J1
+R6
+R7
+w1712225533
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mo.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mo.v
+L0 1
+R11
+r1
+31
+R15
+!s100 j2OFd24;meSMBkjJ[zE621
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mo.v|
+!s108 1712307369.403000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mo.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_s
+R16
+IbkPi`]4NhkPiGJoGOX2m92
+R6
+R7
+w1712294558
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_s.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_s.v
+L0 1
+R11
+r1
+31
+R15
+!s100 INBfaGC8FmbSe>zG`]76@0
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_s.v|
+!s108 1712307369.503000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_s.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_y_ten_unit
+R16
+I[]L=I0@_]Y5=ilVQoDU>l3
+R6
+R7
+w1712225934
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_ten_unit.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_ten_unit.v
+L0 1
+R11
+r1
+31
+R15
+!s100 ^o3[WD]^gF5on8V^ZEg[j2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_ten_unit.v|
+!s108 1712307369.603000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_ten_unit.v|
+!i10b 1
+!s85 0
+!i111 0
+vcnt_y_thousand_hundred
+I`zeY?D>h^7iAAK^e:U0hi3
+R6
+R7
+w1712225608
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_thousand_hundred.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_thousand_hundred.v
+L0 1
+R11
+r1
+31
+R15
+Z17 !s110 1712307367
+!s100 ck:HlGND6XL>mT7bMgH^:2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_thousand_hundred.v|
+!s108 1712307367.848000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_y_thousand_hundred.v|
+!i10b 1
+!s85 0
+!i111 0
+vcontrol
+R17
+IPmhZ6Dgh5FnfBg=5iJo9:3
+R6
+R7
+w1712303741
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control.v
+L0 1
+R11
+r1
+31
+R15
+!s100 SK4J5kUO5mab7WRLB_45^1
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control.v|
+!s108 1712307367.945000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control.v|
+!i10b 1
+!s85 0
+!i111 0
+vcontrol_bcd
+I4;aOFQELLDI]6o5k?j=T>2
+R6
+R7
+w1712238207
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v
+L0 2
+R11
+r1
+31
+R15
+!s110 1712243198
+!s108 1712243198.295000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_bcd.v|
 !s100 3jJB`dSMU9R9SXQ^bc_2d1
 !i10b 1
 !s85 0
 !i111 0
 vcontrol_cnt
-R11
-ILfDHD>4Gd8mnBNz2ULhP_3
-R1
-R2
-w1712241389
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_cnt.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_cnt.v
-L0 1
+IKC_?GcL4]Dkc79cL;dzVD1
 R6
+R7
+w1712303134
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_cnt.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_cnt.v
+L0 1
+R11
 r1
 31
+R15
+R5
+!s100 Y]@N[27X``>7:PcZQIeVN2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_cnt.v|
+!s108 1712307368.046000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_cnt.v|
+!i10b 1
+!s85 0
+!i111 0
+vcontrol_decode_7seg
+R5
+Izgc:m]RjzJKJTX]YQZGjh2
+R6
+R7
+R8
+R9
 R10
-!s100 `1I^NX`c:_;d^mme@2C1`3
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_cnt.v|
-!s108 1712243198.433000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_cnt.v|
+L0 2
+R11
+r1
+31
+R12
+R13
+R14
+R15
+!s100 V]_@S4[h4foXE[o]7d7W00
 !i10b 1
 !s85 0
 !i111 0
 vcontrol_display_7seg
+R5
+I9i9R^RNB<QWJSai:@mE@[1
+R6
+R7
+R8
+R9
+R10
+L0 93
 R11
-I`Cm0^W`h`YRiDCE_hfO<T2
-R1
-R2
+r1
+31
 R12
 R13
 R14
-L0 2
-R6
-r1
-31
 R15
-R16
-R17
-R10
-!s100 _RB0;PJFJ=J4fgh1gN@CC1
+!s100 ;_O2W:9<<Qz`OkPJaYA8m2
 !i10b 1
 !s85 0
 !i111 0
 vcontrol_display_switch
-IXV5MKSee1LD3mfT>dnm4V0
-R1
-R2
-w1712223193
-8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_switch.v
-FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_switch.v
-L0 1
+R5
+IEcHF=[^GC;k6l2P_?3B2k0
 R6
+R7
+w1712253909
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_display_switch.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_display_switch.v
+L0 1
+R11
 r1
 31
-R10
-R18
-!s100 `5al_6kDS7@^IzT01N5592
-!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_switch.v|
-!s108 1712243197.086000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/control_display_switch.v|
+R15
+!s100 mbCS_oFOmQho@@76[bDZR0
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_display_switch.v|
+!s108 1712307368.257000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_display_switch.v|
+!i10b 1
+!s85 0
+!i111 0
+vfsm
+R5
+I<I<43cX4blRBz5Z@hRJYS2
+R6
+R7
+w1712219511
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm.v
+L0 1
+R11
+r1
+31
+R15
+!s100 WdOWdE4OUfn:T`6PgE?RF1
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm.v|
+!s108 1712307368.400000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm.v|
+!i10b 1
+!s85 0
+!i111 0
+vfsm_mode
+R5
+IQNI5]E?ml4:V[C>RWZAZ42
+R6
+R7
+w1712303761
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_mode.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_mode.v
+L0 1
+R11
+r1
+31
+R15
+!s100 kmA2W>PD4XocgHhBIm`Ym0
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_mode.v|
+!s108 1712307368.500000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_mode.v|
+!i10b 1
+!s85 0
+!i111 0
+vfsm_state_handler
+R5
+Iiz8i5SK1MELELPgVPHf:a2
+R6
+R7
+w1712289462
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_state_handler.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_state_handler.v
+L0 1
+R11
+r1
+31
+R15
+!s100 EdkWP4=gzUKMh@L:UzoR93
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_state_handler.v|
+!s108 1712307368.601000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_state_handler.v|
 !i10b 1
 !s85 0
 !i111 0
 vpulse_1s
-R18
-I_dAfMgZM4??K^n92ed_Tb1
-R1
-R2
-w1712242357
-8C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\pulse_1s.v
-FC:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\pulse_1s.v
-L0 1
+R5
+Il:CbUA=I]P0?fM]VRmo^l1
 R6
+R7
+w1712303135
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/pulse_1s.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/pulse_1s.v
+L0 1
+R11
 r1
 31
-R10
-!s100 fkaF27klRzkZFS4OO3RdO3
-!s90 -reportprogress|300|-work|work|-vopt|C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\pulse_1s.v|
-!s108 1712243197.184000
-!s107 C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\pulse_1s.v|
+R15
+!s100 @`If];:6=DAZJP=e9BBBD2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/pulse_1s.v|
+!s108 1712307368.701000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/pulse_1s.v|
 !i10b 1
 !s85 0
 !i111 0
-vtb_each_module
-R18
-IKM;^CN38]4OL1MRMblhkI1
-R1
-R2
-w1712243186
-8C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\tb_each_module.v
-FC:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\tb_each_module.v
-L0 81
+vtb_control_decode
+R16
+I7IFgOM[3b1O9zR7Z@?QcI1
 R6
+R7
+w1712307342
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/testbench/tb_control_decode.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/testbench/tb_control_decode.v
+L0 1
+R11
 r1
 31
-R10
-!s90 -reportprogress|300|-work|work|-vopt|C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\tb_each_module.v|
-!s100 =2aUfUNNPXaO?l?nE8]A33
-!s108 1712243197.316000
-!s107 C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab3\version_1.2\tb_each_module.v|
+R15
+!s100 n3b<0PJo^iELEC10==nOh0
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/testbench/tb_control_decode.v|
+!i10b 1
+!s85 0
+!s108 1712307369.704000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/testbench/tb_control_decode.v|
+!i111 0
+vtb_each_module
+I9<1;OK8h;MM;VoZB6_>[V2
+R6
+R7
+w1712303419
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/tb_each_module.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/tb_each_module.v
+L0 1
+R11
+r1
+31
+R15
+!s110 1712303426
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/tb_each_module.v|
+!s100 m;U`2L9Cg>Dh=2Bo>YDW62
+!s108 1712303426.625000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/version_1.2/tb_each_module.v|
 !i10b 1
 !s85 0
 !i111 0

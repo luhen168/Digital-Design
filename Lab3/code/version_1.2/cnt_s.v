@@ -7,6 +7,7 @@ module cnt_s (
     output pulse_1mi 
 );
     reg [5:0] sec_counter;
+    
     always @(posedge clk or negedge rst)begin
         if (~rst) begin      // 
             sec_counter <= 6'd0;

@@ -1,7 +1,7 @@
 // TOP module
 module control_decode_7seg (
 	input enable_s, enable_mi, enable_h,
-		input enable_d, enable_mo, enable_y,
+	input enable_d, enable_mo, enable_y,
     input [5:0] cnt_s, cnt_mi, cnt_h, cnt_d, cnt_mo,   	// Input BCD 6-bits
     input [6:0] cnt_y_ten_unit, cnt_y_thousand_hundred,	// Input BCD 7-bits 
 	output [13:0] led_s, led_y_thousand_hundred,
@@ -70,7 +70,7 @@ endmodule
 
 // BCD by Doubble Dabble 
 module bcd(
-	input [5:0] enable_display,
+	input enable_display,
    	input [6:0] cnt,
    	output [7:0] led_out
 );
