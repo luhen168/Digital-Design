@@ -7,20 +7,33 @@ module cnt_s (
     output pulse_1mi 
 );
     reg [5:0] sec_counter;
+    reg pre_increase_s, pre_decrease_s;
+
     always @(posedge clk or negedge rst)begin
         if (~rst) begin
             sec_counter <= 6'd0;
+            pre_increase_s <= 1;
+            pre_decrease_s <= 1;
         end else begin
-            if (pulse_1s & enable_cnt_s) begin
-                if (sec_counter == 6'd59) sec_counter <= 6'd0;
-                else sec_counter <= sec_counter + 1;
-            end else if(enable_cnt_s == 0) begin
-                if(increase_s == 1) begin 
+            if (enable_cnt_s) begin
+                if (pulse_1s) begin
                     if (sec_counter == 6'd59) sec_counter <= 6'd0;
-                    else sec_counter <= sec_counter + 1;
-                end else if (decrease_s == 1) begin
-                    if (sec_counter == 0) sec_counter <= 6'd59;
-                    else sec_counter <= sec_counter - 1;
+                    else sec_counter <= sec_counter + 1;   
+                end
+
+                if(increase_s != pre_increase_s) begin
+                    pre_increase_s <= increase_s;
+                    if (increase_s == 0) begin
+                        if (sec_counter == 6'd59) sec_counter <= 6'd0;
+                        else sec_counter <= sec_counter + 1;
+                    end
+                end else
+                if(decrease_s != pre_decrease_s) begin
+                    pre_decrease_s <= decrease_s;
+                    if (decrease_s == 0) begin
+                        if (sec_counter == 6'd00) sec_counter <= 6'd59;
+                        else sec_counter <= sec_counter - 1;
+                    end
                 end
             end 
         end

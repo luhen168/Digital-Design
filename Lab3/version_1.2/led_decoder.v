@@ -1,6 +1,6 @@
 module led_decoder (
 	input enable_display,
-   input [6:0] cnt,
+   	input [6:0] cnt,
 	output [13:0] led
 );
 

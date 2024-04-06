@@ -6,7 +6,7 @@ module cnt_button_press(
 );
 
 // Constants
-localparam integer DEBOUNCE_LIMIT = 2500000; // 50ms debounce time
+localparam integer DEBOUNCE_LIMIT = 250000; // 5ms debounce time
 localparam integer PRESS_LIMIT = 15000000; // 300ms press time
 
 // Internal signals
@@ -25,7 +25,7 @@ always @(posedge clk or negedge rst) begin
         signal <= 0;
     end else begin
         // Button debounce logic
-        if (button == button_debounced) begin
+        if (button == ~button_debounced) begin
             debounce_counter <= 0;
         end else begin
             debounce_counter <= debounce_counter + 1;

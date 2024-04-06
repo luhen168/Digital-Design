@@ -5,15 +5,15 @@ module pulse_1s (
     output reg pulse_1s
 );
     // localparam divider = 49999999;
-    localparam divider = 199999;
-    // localparam divider = 2;
+    localparam divider = 9999999;
+    // localparam divider = 24;
 
     reg [25:0] counter;
 
     always @(posedge clk or negedge rst) begin
         if (~rst) begin      
             counter <= 0;
-            pulse_1s <= 1;
+            pulse_1s <= 0;
         end else begin
             if (enable_pulse_1s) begin 
                 if (counter == divider) begin
