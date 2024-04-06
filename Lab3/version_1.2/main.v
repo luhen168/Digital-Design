@@ -40,15 +40,29 @@ module main (
     wire [5:0] cnt_s, cnt_mi, cnt_h;
     wire [13:0] FPGA_led_s, FPGA_led_mi, FPGA_led_h;
 
-    wire increase_signal, decrease_signal;
-    button_detect inst_button_detect (
-        .clk(clk),
-        .rst(rst),
-        .increase_button(increase_button),
-        .decrease_button(decrease_button),
-        .increase_signal(increase_signal),
-        .decrease_signal(decrease_signal)
-    );
+    reg increase_signal, decrease_signal;
+
+    always @(posedge clk or negedge rst) begin
+        if (~rst) begin
+            increase_signal = 1;
+            decrease_signal = 1;
+        end
+        else begin
+            if (state != 3'b000) begin
+                increase_signal = increase_button;
+                decrease_signal = decrease_button;
+            end 
+        end
+    end
+
+    // button_detect inst_button_detect (
+    //     .clk(clk),
+    //     .rst(rst),
+    //     .increase_button(increase_button),
+    //     .decrease_button(decrease_button),
+    //     .increase_signal(increase_signal),
+    //     .decrease_signal(decrease_signal)
+    // );
 
     pulse_1s inst_pulse_1s (
         .clk(clk), 
@@ -61,8 +75,8 @@ module main (
         .clk(clk), 
         .rst(rst), 
         .pulse_1s(pulse_1s),
-        .increase_s(increase_button),
-        .decrease_s(decrease_button),
+        .increase_s(increase_signal),
+        .decrease_s(decrease_signal),
         .enable_cnt_s(enable_cnt[0]),
         .cnt_s(cnt_s),
         .pulse_1mi(pulse_1mi)
@@ -72,8 +86,8 @@ module main (
         .clk(clk), 
         .rst(rst), 
         .pulse_1mi(pulse_1mi),
-        .increase_mi(increase_button),
-        .decrease_mi(decrease_button),
+        .increase_mi(increase_signal),
+        .decrease_mi(decrease_signal),
         .enable_cnt_mi(enable_cnt[1]),
         .cnt_mi(cnt_mi),
         .pulse_1h(pulse_1h)
@@ -83,8 +97,8 @@ module main (
         .clk(clk), 
         .rst(rst), 
         .pulse_1h(pulse_1h),
-        .increase_h(increase_button),
-        .decrease_h(decrease_button),
+        .increase_h(increase_signal),
+        .decrease_h(decrease_signal),
         .enable_cnt_h(enable_cnt[2]),
         .cnt_h(cnt_h),
         .pulse_1d(pulse_1d)
