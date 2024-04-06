@@ -17,8 +17,8 @@ module control_cnt (
 		.rst(rst),
         .enable_cnt_s(enable_cnt_s),
         .pulse_1s(pulse_1s),
-        .increase_s(increase_s),
-        .decrease_s(decrease_s),
+        .increase_s(increase_signal),
+        .decrease_s(decrease_signal),
         .pulse_1mi (pulse_1mi),
         .cnt_s(cnt_s)
     );

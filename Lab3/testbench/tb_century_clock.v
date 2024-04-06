@@ -1,48 +1,23 @@
 module tb_century_clock;
     reg clk;
     reg rst;
-    reg in;
-    reg enable_pulse_1s;
-    wire pulse_1s;
-    // wire [5:0] seconds, minutes, hours; // use wire to bcd and display 7- 
-    // wire sig_1min, sig_1hour, sig_1day;    
+    reg display_switch;                                           // use switch to control
+    reg mode_button, increase_button, decrease_button;            // use button to control
 
-    // Instantiate the top module
-    // module_clock_century dut (
-    //     .clk(clk),
-    //     .rst(rst)
-    // );
+    wire [13:0] FPGA_led_12, FPGA_led_34, FPGA_led_56, FPGA_led_78; 
 
-    pulse_1s inst_sig (
+    century_clock inst_century_clock (
         .clk(clk),
         .rst(rst),
-        .enable_pulse_1s(enable_pulse_1s),
-    	.pulse_1s(pulse_1s)
+        .display_switch(display_switch),
+    	.mode_button(mode_button),
+        .increase_button(increase_button),
+        .decrease_button(decrease_button),
+        .FPGA_led_12(FPGA_led_12),
+        .FPGA_led_34(FPGA_led_34),
+        .FPGA_led_56(FPGA_led_56),
+        .FPGA_led_78(FPGA_led_78)
     );
-
-    // SecondsCounter inst_sec (
-    //     .clk(clk),
-    //     .rst(rst),
-    //     .sig_1s(sig_1s),
-    //     .sig_1min(sig_1min),  // output to incre minute
-    //     .seconds(seconds)           // output for 7-seg
-    // );
-
-    // MinutesCounter inst_min (
-    //     .clk(clk),
-    //     .rst(rst),
-    //     .sig_1min(sig_1min),  // input
-    //     .sig_1hour(sig_1hour),      // output 
-    //     .minutes(minutes)           
-    // );
-
-    // HoursCounter inst_hour (
-    //     .clk(clk),
-    //     .rst(rst),      
-    //     .sig_1hour(sig_1hour),      // input
-    //     .sig_1day (sig_1day),       // output
-    //     .hours(hours)               // output 
-    // );
 
 
 
@@ -56,9 +31,71 @@ module tb_century_clock;
     initial begin
         rst = 0; // 
         #20 rst = 1; // Assert reset for 20 time units
-        enable_pulse_1s = 1;
+        display_switch = 0;
+        #100; // Select second 
+        mode_button = 0;
+        #100;
+        mode_button = 1;
 
-        #15000000; // Simulate for 200 time units
+        #100; // Increase second 
+        increase_button = 0;
+        #100;
+        increase_button = 1;
+
+        #100; // Decrease second 
+        decrease_button = 0;
+        #100;
+        decrease_button = 1;
+
+        #100; // Select Min 
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+
+        #100; // Select hour
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+
+        #100; // Select normal 
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+
+        #1000; // delay
+
+        display_switch = 1; // display d/m/y
+        #100; // Select yy
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+
+        #100; // Increase yy
+        increase_button = 0;
+        #100;
+        increase_button = 1;
+
+        #100; // Decrease yy
+        decrease_button = 0;
+        #100;
+        decrease_button = 1;
+
+        #100; // Select mm 
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+
+        #100; // Select dd
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+
+        #100; // Select normal 
+        mode_button = 0;
+        #100;
+        mode_button = 1;
+        
+        #100; // Simulate for 200 time units
         $stop; 
     end
 endmodule 

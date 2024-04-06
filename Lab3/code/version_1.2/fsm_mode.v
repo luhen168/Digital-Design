@@ -5,7 +5,7 @@ module fsm_mode(
     output reg [2:0] state
 );
     
-    reg [2:0] state_next;
+    // reg [2:0] state_next = NORMAL;
 
     localparam NORMAL = 3'b000;
     localparam SS = 3'b001;
@@ -15,38 +15,51 @@ module fsm_mode(
     localparam MO = 3'b101;
     localparam YY = 3'b110;
 
-    always @(posedge mode_button ) begin 
-        case(state)
-            NORMAL: 
-                if(mode_button) state_next = SS;
-                else state_next = NORMAL;
-            SS: 
-                if(mode_button) state_next = MI;
-                else state_next = SS;
-            MI: 
-                if(mode_button) state_next = HH;
-                else state_next = MI;
-            HH: 
-                if(mode_button) state_next = DD;
-                else state_next = HH;
-            DD: 
-                if(mode_button)state_next = MO;
-                else state_next = DD;
-            MO: 
-                if(mode_button) state_next = YY;
-                else state_next = MO;
-            YY: 
-                if(mode_button) state_next = NORMAL;
-                else state_next = YY;
-            default: state_next = NORMAL;
-        endcase
+    always @(negedge rst or negedge mode_button) begin
+        if (~rst)
+            state <= NORMAL;
+        else begin
+            case(state)
+                NORMAL: 
+                    state = SS;
+                SS: 
+                    state = MI;
+                MI: 
+                    state = HH;
+                HH: 
+                    state = DD;
+                DD:
+                    state = MO;
+                MO: 
+                    state = YY;
+                YY: 
+                    state = NORMAL;
+                default: 
+                    state = NORMAL;
+            endcase
+        end
     end 
-
-
-    always@(posedge clk or negedge rst) begin 
-        if(~rst)
-           state <= NORMAL;
-        else 
-           state <= state_next; 
-    end  
 endmodule
+    // always @(negedge mode_button) begin 
+    // // always @(mode_button or state) begin 
+    //         state_next = NORMAL;
+    //         case(state)
+    //             NORMAL: state_next = SS;
+    //             SS: state_next = MI;
+    //             MI: state_next = HH;
+    //             HH: state_next = DD;
+    //             DD: state_next = MO;
+    //             MO: state_next = YY;
+    //             YY: state_next = NORMAL;
+    //             default: state_next = NORMAL;
+    //         endcase
+    // end 
+
+
+    // always@(posedge clk or negedge rst) begin 
+    //     if(~rst)
+    //        state <= NORMAL;
+    //     else 
+    //        state <= state_next; 
+    // end  
+// endmodule

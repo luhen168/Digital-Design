@@ -7,29 +7,40 @@ module cnt_y_ten_unit (
     output pulse_increase, pulse_decrease
 );
 
-    reg [6:0] y_ten_unit_counter;
+    reg [6:0] cnt;
+    reg pre_increase_y, pre_decrease_y;
 
-    always @(posedge clk or negedge rst) begin
+    always @(posedge clk or negedge rst)begin
         if (~rst) begin
-            y_ten_unit_counter <= 7'd0;
+            cnt <= 7'd0;
+            pre_increase_y <= 1;
+            pre_decrease_y <= 1;
         end else begin
-            if(pulse_1y & enable_cnt_y) begin
-                if (y_ten_unit_counter == 7'd99) y_ten_unit_counter <= 7'd0; // Reset y_ten_unit_counter when it = 23
-                else y_ten_unit_counter <= y_ten_unit_counter + 1;
-            end else if (enable_cnt_y == 0) begin
-                if (increase_y == 1 ) begin
-                    if(y_ten_unit_counter == 7'd99) begin 
-                        y_ten_unit_counter <= 7'd0;
-                    end else y_ten_unit_counter <= y_ten_unit_counter + 1;
-                end else if (decrease_y == 1) begin
-                    if (y_ten_unit_counter == 7'd0) begin
-                        y_ten_unit_counter <= 7'd99;
-                    end else y_ten_unit_counter <= y_ten_unit_counter - 1;
+            if (enable_cnt_y) begin
+                if (pulse_1y) begin
+                    if (cnt == 7'd99) cnt <= 7'd0;
+                    else cnt <= cnt + 1;   
                 end
-            end
+
+                if(increase_y != pre_increase_y) begin
+                    pre_increase_y <= increase_y;
+                    if (increase_y == 0) begin
+                        if (cnt == 7'd99) cnt <= 7'd0;
+                        else cnt <= cnt + 1;
+                    end
+                end else
+                if(decrease_y != pre_decrease_y) begin
+                    pre_decrease_y <= decrease_y;
+                    if (decrease_y == 0) begin
+                        if (cnt == 7'd00) cnt <= 7'd99;
+                        else cnt <= cnt - 1;
+                    end
+                end
+            end 
         end
     end
-    assign pulse_increase = ((y_ten_unit_counter == 7'd99) & pulse_1y) | ((y_ten_unit_counter == 7'd99) & increase_y);
-    assign pulse_decrease = (y_ten_unit_counter == 7'd0) & decrease_y;
-    assign cnt_y_ten_unit = y_ten_unit_counter;
+    assign pulse_increase = (cnt == 7'd99) & pulse_1y;
+    assign pulse_increase = (cnt == 7'd99) & ~increase_y;   
+    assign pulse_decrease = (cnt == 7'd0) & ~decrease_y;
+    assign cnt_y_ten_unit = cnt;
 endmodule

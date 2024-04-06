@@ -17,31 +17,31 @@ module control_decode_7seg (
 
 	bcd inst_led_s (         		
 		.enable_display(enable_s),
-		.cnt(cnt_s),
+		.cnt({1'b0,cnt_s}),
 		.led_out(led8_s)
 	);
 
 	bcd inst_led_mi (				// sub module in top
 		.enable_display(enable_mi),
-		.cnt(cnt_mi),
+		.cnt({1'b0,cnt_mi}),
 		.led_out(led8_mi)
 	);
 
 	bcd inst_led_h (				// sub module in top
 		.enable_display(enable_h),
-		.cnt(cnt_h),
+		.cnt({1'b0,cnt_h}),
 		.led_out(led8_h)	
 	);
 
 	bcd inst_led_d (
 		.enable_display(enable_d),
-		.cnt(cnt_d),
+		.cnt({1'b0,cnt_d}),
 		.led_out(led8_d)
     );
 
 	bcd inst_led_mo (
 		.enable_display(enable_mo),
-		.cnt(cnt_mo),
+		.cnt({1'b0,cnt_mo}),
 		.led_out(led8_mo)
     );
 
@@ -58,13 +58,20 @@ module control_decode_7seg (
     );
 
    control_display_7seg inst_display_7seg(
-		.in_top({led8_h[7:4], led8_h[3:0], led8_mi[7:4], 
-				led8_mi[3:0], led8_s[7:4], led8_s[3:0], 
-				led8_d[7:4], led8_d[3:0], led8_mo[7:4], 
-				led8_mo[3:0], led8_y_ten_unit[7:4], led8_y_ten_unit[3:0],
+		.in_top({led8_h[7:4], led8_h[3:0], 
+				led8_mi[7:4], led8_mi[3:0], 
+				led8_s[7:4], led8_s[3:0], 
+				led8_d[7:4], led8_d[3:0], 
+				led8_mo[7:4], led8_mo[3:0], 
+				led8_y_ten_unit[7:4], led8_y_ten_unit[3:0],
 				led8_y_thousand_hundred[7:4], led8_y_thousand_hundred[3:0]}),
-		.out_top({led_h[13:0], led_mi[13:0], led_s[13:0], led_d[13:0], led_mo[13:0], 
-				led_h[13:0], led_y_ten_unit[13:0], led_y_thousand_hundred[13:0]})
+		.out_top({led_h[13:0], 
+				led_mi[13:0], 
+				led_s[13:0], 
+				led_d[13:0], 
+				led_mo[13:0], 
+				led_y_ten_unit[13:0], 
+				led_y_thousand_hundred[13:0]})
 	);
 endmodule
 
@@ -121,7 +128,7 @@ module bin_to_7seg (		// module giai ma led 7 thanh
 	assign z = in[1];
 	assign w = in[0];
 	// Luc nap mach co the bi nguoc thi dao lai 0 la sang 
-	assign out[0] = x&z | x&y | y&~z&~w | ~x&~y&~z&w ;				//ham Fa 
+	assign out[0] = x&z | x&y | y&~z&~w | ~x&~y&~z&w ;				//ham Fa ~ have lowest weight
 	assign out[1] = x&z | x&y | y&~z&w | y&z&~w  ;					//ham Fb 
 	assign out[2] = x&z | x&y | ~y&z&~w		;   						//ham Fc
 	assign out[3] = x&z | x&y | y&~z&~w | y&z&w | ~x&~y&~z&w; 	//ham Fd 

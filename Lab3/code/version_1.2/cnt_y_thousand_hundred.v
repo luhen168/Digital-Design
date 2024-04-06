@@ -5,23 +5,31 @@ module cnt_y_thousand_hundred (
     output [6:0] cnt_y_thousand_hundred // var type net is wire 
 );
 
-    reg [6:0] y_thousand_hundred_counter;
+    reg [6:0] cnt;
+    reg pre_increase, pre_decrease; 
 
     always @(posedge clk or negedge rst) begin
         if (~rst) begin
-            y_thousand_hundred_counter <= 7'd0;
+            cnt <= 7'd0;
+            pre_increase <= 1;
+            pre_decrease <= 1; 
         end else begin
-            if(pulse_increase & enable_cnt_y) begin
-                if (y_thousand_hundred_counter == 7'd99) y_thousand_hundred_counter <= 7'd0; // Reset hour_counter when it = 23
-                else y_thousand_hundred_counter <= y_thousand_hundred_counter + 1;
-            end else if(pulse_increase & ~enable_cnt_y) begin
-                if (y_thousand_hundred_counter == 7'd99) y_thousand_hundred_counter <= 7'd0; // Reset hour_counter when it = 23
-                else y_thousand_hundred_counter <= y_thousand_hundred_counter + 1;
-            end else if(pulse_increase & ~enable_cnt_y) begin
-                if (y_thousand_hundred_counter == 7'd0) y_thousand_hundred_counter <= 7'd99; // Reset hour_counter when it = 23
-                else y_thousand_hundred_counter <= y_thousand_hundred_counter - 1;
-            end
+            if (enable_cnt_y) begin
+                if(pulse_increase != pre_increase) begin
+                    pre_increase <= pulse_increase;
+                    if(pulse_increase == 0) begin 
+                        if (cnt == 7'd99) cnt <= 7'd0;
+                        else cnt <= cnt + 1;
+                    end
+                end else if (pulse_decrease != pre_decrease) begin
+                    pre_decrease <= pulse_decrease;
+                    if(pulse_decrease) begin
+                        if (cnt == 7'd00) cnt <= 7'd99;
+                        else cnt <= cnt - 1;
+                    end
+                end
+            end 
         end
     end
-    assign cnt_y_thousand_hundred = y_thousand_hundred_counter;
+    assign cnt_y_thousand_hundred = cnt;
 endmodule

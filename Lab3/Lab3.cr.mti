@@ -26,16 +26,6 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	tb_control_decode
 
-} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_decode_7seg.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_decode_7seg.v
-QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module control_decode_7seg
--- Compiling module bcd
--- Compiling module control_display_7seg
--- Compiling module bin_to_7seg
-
-Top level modules:
-	control_decode_7seg
-
 } {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mi.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_mi.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module cnt_mi
@@ -43,12 +33,19 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	cnt_mi
 
-} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_button_press.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/cnt_button_press.v
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_mode.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_mode.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module cnt_button_press
+-- Compiling module fsm_mode
 
 Top level modules:
-	cnt_button_press
+	fsm_mode
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_state_handler.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm_state_handler.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module fsm_state_handler
+
+Top level modules:
+	fsm_state_handler
 
 } {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/pulse_1s.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/pulse_1s.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -63,13 +60,6 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 
 Top level modules:
 	century_clock
-
-} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_cnt.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/control_cnt.v
-QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module control_cnt
-
-Top level modules:
-	control_cnt
 
 } {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab3/code/version_1.2/fsm.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013

@@ -70,6 +70,8 @@ module control (
 
 
 	control_display_switch inst_display_switch(
+		.clk(clk),
+		.rst(rst), 
 		.display_switch(display_switch),
 		.led_s(led_s),
 		.led_mi(led_mi), 

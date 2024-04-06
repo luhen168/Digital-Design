@@ -6,8 +6,10 @@ module cnt_button_press(
 );
 
 // Constants
-localparam integer DEBOUNCE_LIMIT = 2500000; // 50ms debounce time
-localparam integer PRESS_LIMIT = 15000000; // 300ms press time
+// localparam integer DEBOUNCE_LIMIT = 2500000; // 50ms debounce time
+// localparam integer PRESS_LIMIT = 15000000; // 300ms press time
+localparam integer DEBOUNCE_LIMIT = 25; // 50ms debounce time
+localparam integer PRESS_LIMIT = 90; // 300ms press time
 
 // Internal signals
 reg [23:0] debounce_counter = 0;
