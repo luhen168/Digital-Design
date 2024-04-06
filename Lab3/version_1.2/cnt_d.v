@@ -5,12 +5,12 @@ module cnt_d (
     input [6:0] cnt_mo, cnt_y_ten_unit,
     input increase_d, decrease_d, enable_cnt_d,
     output [5:0] cnt_d,
-    output pulse_1mo,
-
-    output [5:0] day_total_in_mo
+    output pulse_1mo
 );
     reg [5:0] cnt;
     reg pre_increase_d, pre_decrease_d;
+    reg [5:0] day_in_month;
+    wire [5:0] day_total_in_mo;
 
     assign pulse_1mo = (cnt == day_total_in_mo) & pulse_1d;
     assign day_total_in_mo =    (cnt_mo == 7'd1) ? 5'd31 : // January
@@ -31,13 +31,15 @@ module cnt_d (
 
     always @(posedge clk or negedge rst) begin
         if (~rst) begin
+            day_in_month <= 0;
             cnt <= 6'd1;
             pre_increase_d <= 1;
             pre_decrease_d <= 1;
         end else begin
+            day_in_month <= day_total_in_mo;
             if (enable_cnt_d) begin
                 if (pulse_1d) begin
-                    if (cnt == day_total_in_mo) cnt <= 6'd1;
+                    if (cnt == day_in_month) cnt <= 6'd1;
                     else cnt <= cnt + 1;   
                 end
 
