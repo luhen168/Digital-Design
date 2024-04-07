@@ -1,5 +1,5 @@
 module cnt_h (
-    input clk,cnt
+    input clk,
     input rst,
     input pulse_1h,
     input increase_h, decrease_h, enable_cnt_h,

@@ -12,6 +12,7 @@ module fsm_mode(
     localparam DD = 3'b100;
     localparam MO = 3'b101;
     localparam YY = 3'b110;
+    localparam YY2 = 3'b111;
     
     always @(negedge rst or negedge mode_button) begin
         if (~rst)
@@ -31,6 +32,8 @@ module fsm_mode(
                 MO: 
                     state = YY;
                 YY: 
+                    state = YY2;
+                YY2: 
                     state = NORMAL;
                 default: 
                     state = NORMAL;

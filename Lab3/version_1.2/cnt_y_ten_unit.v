@@ -1,35 +1,43 @@
 module cnt_y_ten_unit (
     input clk,
     input rst,
-    input pulse_1y,
-    input increase_y, decrease_y, enable_cnt_y,
-    output [6:0] cnt_y_ten_unit, // var type net is wire 
-    output pulse_increase, pulse_decrease
+    input pulse_y_ten_unit,
+    input increase_y_ten_unit, decrease_y_ten_unit, enable_cnt_y_ten_unit,
+    output [6:0] cnt_y_ten_unit,
+    output pulse_y_thousand_hundred 
 );
+    reg [6:0] cnt;
+    reg pre_increase_y_ten_unit, pre_decrease_y_ten_unit;
 
-    reg [6:0] y_ten_unit_counter;
-
-    always @(posedge clk or negedge rst) begin
+    always @(posedge clk or negedge rst)begin
         if (~rst) begin
-            y_ten_unit_counter <= 7'd0;
+            cnt <= 7'd24;
+            pre_increase_y_ten_unit <= 1;
+            pre_decrease_y_ten_unit <= 1;
         end else begin
-            if(pulse_1y & enable_cnt_y) begin
-                if (y_ten_unit_counter == 7'd99) y_ten_unit_counter <= 7'd0; // Reset y_ten_unit_counter when it = 23
-                else y_ten_unit_counter <= y_ten_unit_counter + 1;
-            end else if (enable_cnt_y == 0) begin
-                if (increase_y == 1 ) begin
-                    if(y_ten_unit_counter == 7'd99) begin 
-                        y_ten_unit_counter <= 7'd0;
-                    end else y_ten_unit_counter <= y_ten_unit_counter + 1;
-                end else if (decrease_y == 1) begin
-                    if (y_ten_unit_counter == 7'd0) begin
-                        y_ten_unit_counter <= 7'd99;
-                    end else y_ten_unit_counter <= y_ten_unit_counter - 1;
+            if (enable_cnt_y_ten_unit) begin
+                if (pulse_y_ten_unit) begin
+                    if (cnt == 7'd99) cnt <= 7'd0;
+                    else cnt <= cnt + 1;   
                 end
-            end
+
+                if(increase_y_ten_unit != pre_increase_y_ten_unit) begin
+                    pre_increase_y_ten_unit <= increase_y_ten_unit;
+                    if (increase_y_ten_unit == 0) begin
+                        if (cnt == 7'd99) cnt <= 6'd0;
+                        else cnt <= cnt + 1;
+                    end
+                end else
+                if(decrease_y_ten_unit != pre_decrease_y_ten_unit) begin
+                    pre_decrease_y_ten_unit <= decrease_y_ten_unit;
+                    if (decrease_y_ten_unit == 0) begin
+                        if (cnt == 7'd00) cnt <= 7'd99;
+                        else cnt <= cnt - 1;
+                    end
+                end
+            end 
         end
     end
-    assign pulse_increase = ((y_ten_unit_counter == 7'd99) & pulse_1y) | ((y_ten_unit_counter == 7'd99) & increase_y);
-    assign pulse_decrease = (y_ten_unit_counter == 7'd0) & decrease_y;
-    assign cnt_y_ten_unit = y_ten_unit_counter;
+    assign pulse_y_thousand_hundred = (cnt == 7'd99) & pulse_y_ten_unit;
+    assign cnt_y_ten_unit = cnt; // gan' ouput de? muc dich hien thi led 7 thanh
 endmodule

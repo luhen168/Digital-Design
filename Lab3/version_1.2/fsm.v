@@ -2,8 +2,8 @@ module fsm (
     input clk,
     input rst,
     input mode_button,
-    output [5:0] enable_display,
-    output [5:0] enable_cnt,
+    output [6:0] enable_display,
+    output [6:0] enable_cnt,
     output enable_pulse_1s
 );
 

@@ -1,27 +1,41 @@
 module cnt_y_thousand_hundred (
     input clk,
     input rst,
-    input pulse_increase, pulse_decrease, enable_cnt_y,
-    output [6:0] cnt_y_thousand_hundred // var type net is wire 
+    input pulse_y_thousand_hundred,
+    input increase_y_thousand_hundred, decrease_y_thousand_hundred, enable_cnt_y_thousand_hundred,
+    output [6:0] cnt_y_thousand_hundred
 );
+    reg [6:0] cnt;
+    reg pre_increase_y_thousand_hundred, pre_decrease_y_thousand_hundred;
 
-    reg [6:0] y_thousand_hundred_counter;
-
-    always @(posedge clk or negedge rst) begin
+    always @(posedge clk or negedge rst)begin
         if (~rst) begin
-            y_thousand_hundred_counter <= 7'd0;
+            cnt <= 7'd20;
+            pre_increase_y_thousand_hundred <= 1;
+            pre_decrease_y_thousand_hundred <= 1;
         end else begin
-            if(pulse_increase & enable_cnt_y) begin
-                if (y_thousand_hundred_counter == 7'd99) y_thousand_hundred_counter <= 7'd0; // Reset hour_counter when it = 23
-                else y_thousand_hundred_counter <= y_thousand_hundred_counter + 1;
-            end else if(pulse_increase & ~enable_cnt_y) begin
-                if (y_thousand_hundred_counter == 7'd99) y_thousand_hundred_counter <= 7'd0; // Reset hour_counter when it = 23
-                else y_thousand_hundred_counter <= y_thousand_hundred_counter + 1;
-            end else if(pulse_increase & ~enable_cnt_y) begin
-                if (y_thousand_hundred_counter == 7'd0) y_thousand_hundred_counter <= 7'd99; // Reset hour_counter when it = 23
-                else y_thousand_hundred_counter <= y_thousand_hundred_counter - 1;
-            end
+            if (enable_cnt_y_thousand_hundred) begin
+                if (pulse_y_thousand_hundred) begin
+                    if (cnt == 7'd99) cnt <= 7'd0;
+                    else cnt <= cnt + 1;   
+                end
+
+                if(increase_y_thousand_hundred != pre_increase_y_thousand_hundred) begin
+                    pre_increase_y_thousand_hundred <= increase_y_thousand_hundred;
+                    if (increase_y_thousand_hundred == 0) begin
+                        if (cnt == 7'd99) cnt <= 7'd0;
+                        else cnt <= cnt + 1;
+                    end
+                end else
+                if(decrease_y_thousand_hundred != pre_decrease_y_thousand_hundred) begin
+                    pre_decrease_y_thousand_hundred <= decrease_y_thousand_hundred;
+                    if (decrease_y_thousand_hundred == 0) begin
+                        if (cnt == 7'd00) cnt <= 7'd99;
+                        else cnt <= cnt - 1;
+                    end
+                end
+            end 
         end
     end
-    assign cnt_y_thousand_hundred = y_thousand_hundred_counter;
+    assign cnt_y_thousand_hundred = cnt; // gan' ouput de? muc dich hien thi led 7 thanh
 endmodule
