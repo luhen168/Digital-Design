@@ -1,10 +1,10 @@
 module cnt_y_ten_unit (
     input clk,
     input rst,
-    input pulse_1y,
-    input increase_y, decrease_y, enable_cnt_y,
+    input pulse_y_ten_unit,
+    input increase_y, decrease_y, enable_cnt_y_ten_unit,
     output [6:0] cnt_y_ten_unit, // var type net is wire 
-    output pulse_increase, pulse_decrease
+    output pulse_y_thousand_hundred
 );
 
     reg [6:0] cnt;
@@ -12,12 +12,12 @@ module cnt_y_ten_unit (
 
     always @(posedge clk or negedge rst)begin
         if (~rst) begin
-            cnt <= 7'd0;
+            cnt <= 7'd20;
             pre_increase_y <= 1;
             pre_decrease_y <= 1;
         end else begin
-            if (enable_cnt_y) begin
-                if (pulse_1y) begin
+            if (enable_cnt_y_ten_unit) begin
+                if (pulse_y_ten_unit) begin
                     if (cnt == 7'd99) cnt <= 7'd0;
                     else cnt <= cnt + 1;   
                 end
@@ -39,8 +39,6 @@ module cnt_y_ten_unit (
             end 
         end
     end
-    assign pulse_increase = (cnt == 7'd99) & pulse_1y;
-    assign pulse_increase = (cnt == 7'd99) & ~increase_y;   
-    assign pulse_decrease = (cnt == 7'd0) & ~decrease_y;
+    assign pulse_y_thousand_hundred = (cnt == 7'd99) & pulse_y_ten_unit;
     assign cnt_y_ten_unit = cnt;
 endmodule

@@ -4,14 +4,14 @@ module cnt_mo (
     input pulse_1mo,
     input increase_mo, decrease_mo, enable_cnt_mo,
     output [5:0] cnt_mo, // var type net is wire 
-    output pulse_1y
+    output pulse_y_ten_unit
 );
     reg [5:0] cnt;
     reg pre_increase_mo, pre_decrease_mo;
 
     always @(posedge clk or negedge rst)begin
         if (~rst) begin
-            cnt <= 6'd0;
+            cnt <= 6'd1;
             pre_increase_mo <= 1;
             pre_decrease_mo <= 1;
         end else begin
@@ -38,6 +38,6 @@ module cnt_mo (
             end 
         end
     end
-    assign pulse_1y = (cnt == 6'd12) & pulse_1mo;
+    assign pulse_y_ten_unit = (cnt == 6'd12) & pulse_1mo;
     assign cnt_mo = cnt; // gan' ouput de? muc dich hien thi led 7 thanh
 endmodule

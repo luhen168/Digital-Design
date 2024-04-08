@@ -1,7 +1,7 @@
 // TOP module
 module control_decode_7seg (
 	input enable_s, enable_mi, enable_h,
-	input enable_d, enable_mo, enable_y,
+	input enable_d, enable_mo, enable_y_ten_unit, enable_y_thousand_hundred,
     input [5:0] cnt_s, cnt_mi, cnt_h, cnt_d, cnt_mo,   	// Input BCD 6-bits
     input [6:0] cnt_y_ten_unit, cnt_y_thousand_hundred,	// Input BCD 7-bits 
 	output [13:0] led_s, led_y_thousand_hundred,
@@ -46,13 +46,13 @@ module control_decode_7seg (
     );
 
 	bcd inst_led_y_ten_unit (
-		.enable_display(enable_y),
+		.enable_display(enable_y_ten_unit),
 		.cnt(cnt_y_ten_unit),
 		.led_out(led8_y_ten_unit)
     );
 
    bcd inst_led_y_thousand_hundred (
-		.enable_display(enable_y),
+		.enable_display(enable_y_thousand_hundred),
 		.cnt(cnt_y_thousand_hundred),
 		.led_out(led8_y_thousand_hundred)
     );

@@ -56,6 +56,5 @@ module cnt_d (
             end 
         end
     end
-    assign pulse_1mo = (cnt == day_total_in_mo) & pulse_1d;
     assign cnt_d = cnt;
 endmodule

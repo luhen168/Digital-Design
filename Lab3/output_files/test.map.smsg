@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at fsm_state_handler.v(15): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at fsm_mode.v(21): always construct contains both blocking and non-blocking assignments

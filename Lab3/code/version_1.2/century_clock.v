@@ -8,17 +8,16 @@ module century_clock (
 );
 
     wire enable_pulse_1s;
-    wire [5:0] enable_display, enable_cnt;
-
+    wire [6:0] enable_display, enable_cnt;
     fsm inst_fsm(
         .clk(clk),
         .rst(rst),
+		  .display_switch(display_switch),
         .mode_button(mode_button),
         .enable_display(enable_display),
         .enable_cnt(enable_cnt),
         .enable_pulse_1s(enable_pulse_1s)
     );
-
     control inst_control(
         .clk(clk),
         .rst(rst),

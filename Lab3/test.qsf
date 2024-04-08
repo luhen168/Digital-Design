@@ -132,7 +132,5 @@ set_global_assignment -name VERILOG_FILE code/version_1.2/cnt_mo.v
 set_global_assignment -name VERILOG_FILE code/version_1.2/cnt_mi.v
 set_global_assignment -name VERILOG_FILE code/version_1.2/cnt_h.v
 set_global_assignment -name VERILOG_FILE code/version_1.2/cnt_d.v
-set_global_assignment -name VERILOG_FILE code/version_1.2/cnt_button_press.v
 set_global_assignment -name VERILOG_FILE code/version_1.2/century_clock.v
-set_global_assignment -name VERILOG_FILE code/version_1.2/button_detect.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
