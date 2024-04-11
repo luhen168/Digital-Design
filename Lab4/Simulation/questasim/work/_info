@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+cModel Technology
+dC:/Users/luan1/OneDrive/Desktop/TKS/test
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1712859943
+ViBc5LgTOWRCYe3eWPPUSl0
+04 18 4 work tb_euqalizer_8band fast 0
+=2-68f728ba1f7c-66182b27-106-4b04
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.2c;57
+vfir_n
+IR[Y9m=b2]PS4AVT5O7O9^0
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+Z1 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Simulation/questasim
+w1712824299
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v
+L0 1
+Z2 OL;L;10.2c;57
+r1
+31
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s110 1712859925
+!s100 ZL`m1_aOZJdbPz;<nBREC3
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v|
+!s108 1712859925.223000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v|
+!i10b 1
+!s85 0
+!i111 0
+vtapped_delay_block
+R4
+IWhd<2KNAnTb7ZeQiLHXcP1
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+R1
+w1712807966
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v
+L0 1
+R2
+r1
+31
+R3
+!s100 TlO:ofTMAN=ne^H_EWkL<2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v|
+!s108 1712859925.317000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v|
+!i10b 1
+!s85 0
+!i111 0
+vtb_euqalizer_8band
+R4
+I3aI`TCmXRH<7?eTH8K^6L1
+R5
+R1
+w1712859915
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v
+L0 1
+R2
+r1
+31
+R3
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v|
+!i10b 1
+!s100 c_I9YJZU?SYC8>^VK[b1O2
+!s85 0
+!s108 1712859925.511000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v|
+!i111 0
+vtop_module
+R4
+IlQ3^a`Ra:o8Qz4TIEdIP>3
+R5
+R1
+w1712846815
+8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v
+FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v
+L0 1
+R2
+r1
+31
+R3
+!s100 a?=ncXm`PA4;zWa0=^2R=2
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v|
+!s108 1712859925.410000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v|
+!i10b 1
+!s85 0
+!i111 0
