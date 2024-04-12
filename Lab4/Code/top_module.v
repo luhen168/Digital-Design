@@ -2,7 +2,7 @@ module top_module # (
     parameter N = 16,      // Number of bits input
     parameter NUM_FIRS = 8, // Number of FIR filters
 
-    parameter DELAYS_1 = 63, 
+    parameter DELAYS = 62, 
 
     parameter GAIN_1 = 2, 
     parameter GAIN_2 = 4,
@@ -55,7 +55,7 @@ module top_module # (
 
     // parameter [NUM_FIRS*64-1:0] DELAYS = '{3, 4, 5, 6, 7, 8, 9, 10}; // Array of DELAYS for each FIR filter
     // parameter [NUM_FIRS-1:0] COEFFICIENTS = '{32'h12345678, 32'h23456789, 32'h3456789A, 32'h456789AB, 32'h56789ABC, 32'h6789ABCD, 32'h789ABCDE, 32'h89ABCDEF}; // Array of coefficients for each FIR filter
-    parameter [(DELAYS_1+1)*8-1:0] b_1 = {
+    parameter [(DELAYS+1)*8-1:0] b_1 = {
         8'b11111111,
         8'b11111111,
         8'b11111111,
@@ -112,7 +112,7 @@ module top_module # (
         8'b10,
         8'b1,
         8'b0,
-        8'b11111111
+        8'b11111111,
         8'b11111110,
         8'b11111110,
         8'b11111110,
@@ -121,7 +121,7 @@ module top_module # (
         8'b11111111
     };
 
-    parameter [(DELAYS_2+1)*N-1:0] b_2 = {
+    parameter [(DELAYS+1)*N-1:0] b_2 = {
         8'b11111111,
         8'b11111111,
         8'b0,
@@ -187,7 +187,7 @@ module top_module # (
         8'b11111111
     };
 
-    parameter [(DELAYS_3+1)*N-1:0] b_3 = {
+    parameter [(DELAYS+1)*N-1:0] b_3 = {
         8'b11111111,
         8'b00000000,
         8'b00000001,
@@ -253,8 +253,8 @@ module top_module # (
         8'b11111111
     };
 
-    parameter [(DELAYS_4+1)*N-1:0] b_4 = {
-        8'b11111111
+    parameter [(DELAYS+1)*N-1:0] b_4 = {
+        8'b11111111,
         8'b00000000,
         8'b00000000,
         8'b11111110,
@@ -319,7 +319,7 @@ module top_module # (
         8'b11111111
     };
 
-    parameter [(DELAYS_5+1)*N-1:0] b_5 = {
+    parameter [(DELAYS+1)*N-1:0] b_5 = {
         8'b00000000,
         8'b00000000,
         8'b11111111,
@@ -385,7 +385,7 @@ module top_module # (
         8'b00000000
     };
 
-    parameter [(DELAYS_6+1)*N-1:0] b_6 = {
+    parameter [(DELAYS+1)*N-1:0] b_6 = {
         8'b00000000,
         8'b00000000,
         8'b11111110,
@@ -451,7 +451,7 @@ module top_module # (
         8'b00000000
     };
 
-    parameter [(DELAYS_7+1)*N-1:0] b_7 = {
+    parameter [(DELAYS+1)*N-1:0] b_7 = {
         8'b00000000,
         8'b11111111,
         8'b11111111,
@@ -517,7 +517,7 @@ module top_module # (
         8'b00000000
     };
 
-    parameter [(DELAYS_8+1)*N-1:0] b_8 = {
+    parameter [(DELAYS+1)*N-1:0] b_8 = {
         8'b00000000,
         8'b11111111,
         8'b00000000,
@@ -590,7 +590,7 @@ module top_module # (
         .ena(ena), 
         .b(b_1), 
         .x_in(x_in), 
-        .y_out(y_out_1)
+        .y_out(y_out_1_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS), 
@@ -600,7 +600,7 @@ module top_module # (
         .ena(ena), 
         .b(b_2), 
         .x_in(x_in), 
-        .y_out(y_out_2)
+        .y_out(y_out_2_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS), 
@@ -610,7 +610,7 @@ module top_module # (
         .ena(ena), 
         .b(b_3), 
         .x_in(x_in), 
-        .y_out(y_out_3)
+        .y_out(y_out_3_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS), 
@@ -620,7 +620,7 @@ module top_module # (
         .ena(ena), 
         .b(b_4), 
         .x_in(x_in), 
-        .y_out(y_out_4)
+        .y_out(y_out_4_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS), 
@@ -630,7 +630,7 @@ module top_module # (
         .ena(ena), 
         .b(b_5), 
         .x_in(x_in), 
-        .y_out(y_out_5)
+        .y_out(y_out_5_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS), 
@@ -640,7 +640,7 @@ module top_module # (
         .ena(ena), 
         .b(b_6), 
         .x_in(x_in), 
-        .y_out(y_out_6)
+        .y_out(y_out_6_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS), 
@@ -650,7 +650,7 @@ module top_module # (
         .ena(ena), 
         .b(b_7), 
         .x_in(x_in), 
-        .y_out(y_out_7)
+        .y_out(y_out_7_to_gain)
     );
 
     fir_n #(.DELAYS(DELAYS),
@@ -660,7 +660,16 @@ module top_module # (
         .ena(ena), 
         .b(b_8), 
         .x_in(x_in), 
-        .y_out(y_out_8)
+        .y_out(y_out_8_to_gain)
     );
+
+    assign y_out_1 =y_out_1_to_gain * GAIN_1;
+    assign y_out_2 =y_out_2_to_gain * GAIN_2;
+    assign y_out_3 =y_out_3_to_gain * GAIN_3;
+    assign y_out_4 =y_out_4_to_gain * GAIN_4;
+    assign y_out_5 =y_out_5_to_gain * GAIN_5;
+    assign y_out_6 =y_out_6_to_gain * GAIN_6;
+    assign y_out_7 =y_out_7_to_gain * GAIN_7;
+    assign y_out_8 =y_out_8_to_gain * GAIN_8;
 
 endmodule

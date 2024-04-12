@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Apr 12 16:16:24 2024
+Fitter Status : Successful - Fri Apr 12 17:29:01 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : equalizer
 Top-level Entity Name : top_module
 Family : Cyclone IV E
-Device : EP4CE30F23C6
+Device : EP4CE40F23C6
 Timing Models : Final
-Total logic elements : 16,772 / 28,848 ( 58 % )
-    Total combinational functions : 16,342 / 28,848 ( 57 % )
-    Dedicated logic registers : 1,008 / 28,848 ( 3 % )
+Total logic elements : 21,974 / 39,600 ( 55 % )
+    Total combinational functions : 21,548 / 39,600 ( 54 % )
+    Dedicated logic registers : 1,008 / 39,600 ( 3 % )
 Total registers : 1008
 Total pins : 275 / 329 ( 84 % )
 Total virtual pins : 0
-Total memory bits : 0 / 608,256 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total memory bits : 0 / 1,161,216 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 232 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

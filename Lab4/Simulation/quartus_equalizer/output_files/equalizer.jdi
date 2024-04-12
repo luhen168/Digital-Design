@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="1401d70bf5982d773d0b"/>
+    <hash md5_digest_80b="83cd137a390942ed0706"/>
   </project>
   <file_info>
-    <file device="EP4CE30F23C6" path="equalizer.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE40F23C6" path="equalizer.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
