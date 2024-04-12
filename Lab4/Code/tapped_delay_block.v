@@ -2,11 +2,14 @@ module tapped_delay_block #(parameter N = 16) (
     input  clk,
     input  rst,
     input  ena,
-    input  [N-1:0] b,     // coefficients
-    input  [N-1:0] x_in,  // input to the delay block
-    input  [N-1:0] y_in,  // signal to add to x_in after arithmetic operations
-    output [N-1:0] x_out, // delayed x_in 
-    output [N-1:0] y_out // signal after arithmetic operations (combinationally driven)
+    input  signed [7:0] b,     // coefficients
+    input  signed [N-1:0] x_in,  // input to the delay block
+    // input  signed [N-1:0] y_in,  // signal to add to x_in after arithmetic operations
+    input  signed [N*2-1:0] y_in,  // signal to add to x_in after arithmetic operations
+    output signed [N-1:0] x_out, // delayed x_in 
+    // output signed [N-1:0] y_out // signal after arithmetic operations (combinationally driven)
+    output signed [N*2-1:0] y_out // signal after arithmetic operations (combinationally driven)
+
 );
 
 reg [N-1:0] x_reg;
