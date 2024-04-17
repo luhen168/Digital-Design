@@ -1,4 +1,4 @@
-C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v
+C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v {1 {vlog -work work -vopt {C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Testbench\tb_equalizer_8band.v}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module tb_equalizer_8band
 
@@ -12,18 +12,18 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	top_module
 
-} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v
-QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module tapped_delay_block
-
-Top level modules:
-	tapped_delay_block
-
 } {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module fir_n
 
 Top level modules:
 	fir_n
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module tapped_delay_block
+
+Top level modules:
+	tapped_delay_block
 
 } {} {}}

@@ -19,9 +19,9 @@ module tb_equalizer_8band;
     wire signed [N*2-1:0] y_out_6;
     wire signed [N*2-1:0] y_out_7;
     wire signed [N*2-1:0] y_out_8;
-    
+    wire signed [N*2-1:0] y_out;
     // integer
-    integer file,out_file_fir1,out_file_fir2,out_file_fir3,out_file_fir4,out_file_fir5,out_file_fir6,out_file_fir7,out_file_fir8;
+    integer file,out_file_fir1,out_file_fir2,out_file_fir3,out_file_fir4,out_file_fir5,out_file_fir6,out_file_fir7,out_file_fir8, out_file;
     integer read_file;
     integer i;
     reg signed [N-1:0] mem[0:90000]; 
@@ -39,7 +39,8 @@ module tb_equalizer_8band;
         .y_out_5(y_out_5),
         .y_out_6(y_out_6),
         .y_out_7(y_out_7),
-        .y_out_8(y_out_8)
+        .y_out_8(y_out_8),
+        .y_out(y_out)
     );
 
     // Clock generation
@@ -76,6 +77,7 @@ module tb_equalizer_8band;
         out_file_fir6 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer6.txt","w");
         out_file_fir7 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer7.txt","w");
         out_file_fir8 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer8.txt","w");
+        out_file =  $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_file.txt","w");
     end
     always@(posedge clk) begin
         $fdisplayb (out_file_fir1, y_out_1);
@@ -86,11 +88,12 @@ module tb_equalizer_8band;
         $fdisplayb (out_file_fir6, y_out_6);
         $fdisplayb (out_file_fir7, y_out_7);
         $fdisplayb (out_file_fir8, y_out_8);
+        $fdisplayb (out_file, y_out);
     end
 
     initial begin
-        #1000000;
-        $stop;
+        #1820000;
+        $finish;
     end
 
 endmodule

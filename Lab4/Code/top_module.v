@@ -20,14 +20,15 @@ module top_module # (
     input  ena,
     input  signed [N-1:0] x_in,
     
-    output signed [N*2-1:0] y_out_1,
-    output signed [N*2-1:0] y_out_2,
-    output signed [N*2-1:0] y_out_3,
-    output signed [N*2-1:0] y_out_4,
-    output signed [N*2-1:0] y_out_5,
-    output signed [N*2-1:0] y_out_6,
-    output signed [N*2-1:0] y_out_7,
-    output signed [N*2-1:0] y_out_8
+    output reg signed [N*2-1:0] y_out_1,
+    output reg signed [N*2-1:0] y_out_2,
+    output reg signed [N*2-1:0] y_out_3,
+    output reg signed [N*2-1:0] y_out_4,
+    output reg signed [N*2-1:0] y_out_5,
+    output reg signed [N*2-1:0] y_out_6,
+    output reg signed [N*2-1:0] y_out_7,
+    output reg signed [N*2-1:0] y_out_8,
+    output reg signed [N*2-1:0] y_out
 );
 
     wire [N*2-1:0] y_out_1_to_gain;
@@ -663,13 +664,29 @@ module top_module # (
         .y_out(y_out_8_to_gain)
     );
 
-    assign y_out_1 =y_out_1_to_gain * GAIN_1;
-    assign y_out_2 =y_out_2_to_gain * GAIN_2;
-    assign y_out_3 =y_out_3_to_gain * GAIN_3;
-    assign y_out_4 =y_out_4_to_gain * GAIN_4;
-    assign y_out_5 =y_out_5_to_gain * GAIN_5;
-    assign y_out_6 =y_out_6_to_gain * GAIN_6;
-    assign y_out_7 =y_out_7_to_gain * GAIN_7;
-    assign y_out_8 =y_out_8_to_gain * GAIN_8;
+	always@(posedge clk or negedge rst) begin
+		if(~rst) begin
+             y_out_1 <= 0;
+             y_out_2 <= 0;
+             y_out_3 <= 0;
+             y_out_4 <= 0;
+             y_out_5 <= 0;
+             y_out_6 <= 0;
+             y_out_7 <= 0;
+             y_out_8 <= 0;
+             y_out <= 0;
+
+		end else if(ena) begin
+			 y_out_1 <=y_out_1_to_gain * GAIN_1;
+             y_out_2 <=y_out_2_to_gain * GAIN_2;
+             y_out_3 <=y_out_3_to_gain * GAIN_3;
+             y_out_4 <=y_out_4_to_gain * GAIN_4;
+             y_out_5 <=y_out_5_to_gain * GAIN_5;
+             y_out_6 <=y_out_6_to_gain * GAIN_6;
+             y_out_7 <=y_out_7_to_gain * GAIN_7;
+             y_out_8 <=y_out_8_to_gain * GAIN_8;
+             y_out <= y_out_1 + y_out_2 + y_out_3 + y_out_4 + y_out_5 + y_out_6 + y_out_7 + y_out_8;
+		end
+	end
 
 endmodule

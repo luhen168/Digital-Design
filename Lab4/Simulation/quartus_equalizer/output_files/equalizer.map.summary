@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Apr 12 17:26:20 2024
+Analysis & Synthesis Status : Successful - Sat Apr 13 08:00:59 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : equalizer
 Top-level Entity Name : top_module
 Family : Cyclone IV E
 Total logic elements : 22,556
     Total combinational functions : 21,548
-    Dedicated logic registers : 1,008
-Total registers : 1008
+    Dedicated logic registers : 1,249
+Total registers : 1249
 Total pins : 275
 Total virtual pins : 0
 Total memory bits : 0

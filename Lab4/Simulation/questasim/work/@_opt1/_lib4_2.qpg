@@ -18,18 +18,18 @@ Z2 OL;O;10.2c;57
 Z3 dC:/Users/luan1/OneDrive/Desktop/TKS/test
 !s110 1712896402
 T_opt1
-!s110 1712917879
-V2_T`SOjb^kPEX0bW^:aB[2
+!s110 1713286034
+VlF`5CFO3khi4?Hmd244fV2
 04 18 4 work tb_equalizer_8band fast 0
-=1-68f728ba1f7c-66190d77-21e-2f88
+=3-68f728ba1f7c-661eab92-2dc-1d4c
 R1
 n@_opt1
 R2
 vfir_n
-IT0A=7SzF?T;5cJ1WWY8Uo2
+IaP=z1e3H>eo`@YWfg8NjR2
 Z4 V`JN@9S9cnhjKRR_L]QIcM3
 Z5 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Simulation/questasim
-w1712916774
+w1712968856
 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v
 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v
 L0 1
@@ -37,19 +37,20 @@ Z6 OL;L;10.2c;57
 r1
 31
 Z7 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z8 !s110 1713286030
+!s100 MdK7=P?`7]5hDI?e?S@Db1
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v|
-!s110 1712917859
-!s100 :ZC<[n>F<8X>EE_<jZfK`2
-!s108 1712917859.859000
+!s108 1713286030.271000
 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/fir_n.v|
 !i10b 1
 !s85 0
 !i111 0
 vtapped_delay_block
-IGGEf<@2jPGHJ]?PA3a3E80
+R8
+II:EcFHhk6aDVXb1I[K[8X1
 R4
 R5
-w1712909785
+w1712968389
 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v
 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v
 L0 1
@@ -57,20 +58,19 @@ R6
 r1
 31
 R7
-Z8 !s110 1712917860
-!s100 SWli^D1aNF[DH9;ND]EoX2
+!s100 :eClcaZ?cnbm1z@3CJ=c;3
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v|
-!s108 1712917859.999000
+!s108 1713286030.383000
 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/tapped_delay_block.v|
 !i10b 1
 !s85 0
 !i111 0
 vtb_equalizer_8band
 R8
-IJ63^3AccWSKHb7l<j]?>e2
+IXj:DQD[J@TA?5?Dk=D5J^0
 R4
 R5
-w1712909945
+w1713286014
 Z9 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v
 Z10 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v
 L0 1
@@ -80,10 +80,10 @@ r1
 Z11 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v|
 R7
 Z12 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Testbench/tb_equalizer_8band.v|
-!s100 lN[[RK<Wl;FY0FCZ7cZ?P1
 !i10b 1
+!s100 :=<2zmKPLPMK:R^:[SjTY2
 !s85 0
-!s108 1712917860.221000
+!s108 1713286030.587000
 !i111 0
 vtb_euqalizer_8band
 IX@RQ><`?W0>QQ3izWCT^20
@@ -107,10 +107,10 @@ R12
 !i111 0
 vtop_module
 R8
-IfiY_I;0GHo9bd?>=OM_9I3
+IDPPhT0Sb>zQFc_j?zDBWf3
 R4
 R5
-w1712917484
+w1713285529
 8C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v
 FC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v
 L0 1
@@ -118,10 +118,13 @@ R6
 r1
 31
 R7
-!s100 cAcR0_5HmEUW><`BS<Kf=3
-!s108 1712917860.109000
-!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v|
+!s100 ;][6c=Kz`I]ePnJ8JnY`K2
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v|
+!s108 1713286030.480000
+!s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Code/top_module.v|
 !i10b 1
 !s85 0
 !i111 0
+s85 0
+!i111 0
+11 0
