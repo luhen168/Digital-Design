@@ -31,10 +31,10 @@ Tổng hợp mạch bằng FPGA báo cáo các resource cần sử dụng: số 
 ### 3.1. Cách test
 B1: Chuyển file wav lấy mẫu 16khz sang txt mỗi dòng 16bit. (nếu file wav chưa 16khz thì convert qua link này <a href="https://g711.org">g711.org</a> )
 
-B2: Chạy file <a href="Testbench\tb_equalizer_8band.v"> testbench sẽ đọc file input từ 1 file wav 16khz mà bạn muốn trong thư mục <a href="Tools\wav convert\wav original"> và lưu lại kết quả vào các file đầu ra xuất hiện trong thư mục <a href="Testbench">
+B2: Chạy file <a href="Testbench\tb_equalizer_8band.v">tb_equalizer_8band.v</a> testbench sẽ đọc file input từ 1 file wav 16khz mà bạn muốn trong thư mục <a href="Tools\wav convert\wav original">wav original</a> testbench và lưu lại kết quả vào các file đầu ra xuất hiện trong thư mục <a href="Testbench">Testbench</a>
 
-B3: Vào thư mục <a href="Tools\scale"> để scale các file đầu ra của B1 về 16bits
-Sau đó đem chuyển thành file wav bằng <a href="Tools\wav convert\wav convert.py">
+B3: Vào thư mục <a href="Tools\scale">scale</a> để scale các file đầu ra của B1 về 16bits
+Sau đó đem chuyển thành file wav bằng <a href="Tools\wav convert\wav convert.py">wav convert.py</a>
 
 B4: Đem đi vẽ phổ và so sánh với output_python.txt( nhưng chưa làm được python equalizer).
 
