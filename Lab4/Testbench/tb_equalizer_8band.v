@@ -58,7 +58,7 @@ module tb_equalizer_8band;
         #10 rst = 1; // Deassert reset after 10 time units
         ena = 1;    // Enable processing
         // Read data from the file and provide it to the DUT
-            file = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\original_signal.txt", "r");
+            file = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Tools\\wav convert\\mono-synth.txt", "r");
             // file = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\ConvertWavToBit\\tft.txt", "r");
             for (i = 0; i < 90000; i = i + 1) begin
                 read_file = $fscanf(file, "%b\n", mem[i]);
@@ -69,15 +69,15 @@ module tb_equalizer_8band;
     end
 
     initial begin
-        out_file_fir1 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer1.txt","w");
-        out_file_fir2 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer2.txt","w");
-        out_file_fir3 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer3.txt","w");
-        out_file_fir4 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer4.txt","w");
-        out_file_fir5 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer5.txt","w");
-        out_file_fir6 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer6.txt","w");
-        out_file_fir7 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer7.txt","w");
-        out_file_fir8 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_equalizer8.txt","w");
-        out_file =  $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Code\\output_file.txt","w");
+        out_file_fir1 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer1.txt","w");
+        out_file_fir2 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer2.txt","w");
+        out_file_fir3 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer3.txt","w");
+        out_file_fir4 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer4.txt","w");
+        out_file_fir5 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer5.txt","w");
+        out_file_fir6 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer6.txt","w");
+        out_file_fir7 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer7.txt","w");
+        out_file_fir8 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer8.txt","w");
+        out_file =  $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output32bit.txt","w");
     end
     always@(posedge clk) begin
         $fdisplayb (out_file_fir1, y_out_1);

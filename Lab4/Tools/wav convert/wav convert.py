@@ -156,15 +156,15 @@ class Wav:
 if __name__ == "__main__":
 
     # Example usage:
-    # file_path = r'C:\\Users\\luan1\\OneDrive\Desktop\\TKS\\Lab\\Lab4\\ConvertWavToBit\\mono-synth.wav'  # Change this to your WAV file's path
-    # wav = Wav(file_path=file_path)
-    # # wav.print()
-    # wav.save_as_txt(save_path=r"C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\ConvertWavToBit\mono-synth.txt", is_show_dec=False)
-    # wav.save_as_txt(save_path=r"C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\ConvertWavToBit\mono-synth.txt", is_show_dec=True)
+    file_path = r'C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Tools\wav convert\wav original\mono-synth.wav'  # Change this to your WAV file's path
+    wav = Wav(file_path=file_path)
+    # wav.print()
+    wav.save_as_txt(save_path=r"C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Tools\wav convert\mono-synth.txt", is_show_dec=False)
+    wav.save_as_txt(save_path=r"C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Tools\wav convert\mono-synth-detail.txt", is_show_dec=True)
 
-    wav_from_txt = Wav()
-    wav_from_txt.channels = 1
-    wav_from_txt.sample_rate = 16000
-    wav_from_txt.sample_width = 16
-    wav_from_txt.load_from_txt(txt_path=r"C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Wav\output16bit_file.txt")
-    wav_from_txt.save_as(save_path="i_impulse_bin.wav")
+    # wav_from_txt = Wav()
+    # wav_from_txt.channels = 1
+    # wav_from_txt.sample_rate = 16000
+    # wav_from_txt.sample_width = 16
+    # wav_from_txt.load_from_txt(txt_path=r"C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Wav\output16bit_file.txt")
+    # wav_from_txt.save_as(save_path="i_impulse_bin.wav")
