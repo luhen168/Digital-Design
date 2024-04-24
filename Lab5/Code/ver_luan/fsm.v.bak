@@ -67,7 +67,7 @@ module fsm (
                 state <= state_idle;
             end
             else begin 
-                state <= next_state;
+                state <= nextstate;
             end
     end
 endmodule 

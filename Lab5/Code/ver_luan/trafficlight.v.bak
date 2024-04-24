@@ -27,7 +27,7 @@ module traffic_light (
         .pulse_1s(pulse_1s),
         .cnt_pd(cnt_pd), 
 	    .cnt_nopd(cnt_nopd), 
-        .cnt_pd_end(cnt_pd_end),
+        .cnt_pd_end(cnt_pd_end)
         .cnt_nopd_end(cnt_nopd_end), 
         .display_pd(display_pd), 
         .display_nopd(display_nopd)
