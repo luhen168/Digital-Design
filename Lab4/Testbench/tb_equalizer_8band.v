@@ -79,7 +79,7 @@ module tb_equalizer_8band;
         out_file_fir8 = $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output_equalizer8.txt","w");
         out_file =  $fopen("C:\\Users\\luan1\\OneDrive\\Desktop\\TKS\\Lab\\Lab4\\Testbench\\output32bit.txt","w");
     end
-    always@(posedge clk) begin
+    always@(posedge clk) begin // k nen dung trong tb, dung' repeat,...... 
         $fdisplayb (out_file_fir1, y_out_1);
         $fdisplayb (out_file_fir2, y_out_2);
         $fdisplayb (out_file_fir3, y_out_3);

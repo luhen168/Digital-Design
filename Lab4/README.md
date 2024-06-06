@@ -20,7 +20,16 @@ Dùng python đọc file output.txt và chuyển thành file wav, vẽ đồ th�
 Dùng python tạo file outout_python.txt bằng cách dùng các hàm của python để tạo ra bộ Equalizer. So sánh kết quả output.txt với file output_python.txt
 Tổng hợp mạch bằng FPGA báo cáo các resource cần sử dụng: số cell logic, số LUT, số DSP, số RAM
 ```
-
+Bài tập được thực hiện bởi nhóm 9
+Nhóm 9
+Thành viên: Lê Văn Quân
+            Lê Thành Luân
+            Trần Quang Huy
+            Phạm Trương Hà Phương
+Giảng viên: Thầy Nguyễn Đức Minh
+Mentor: Anh Lâm và Anh Chuyên (Infineon)
+        Anh Trần Trung Hiếu
+                              
 ## 1. Mô tả thiết kế 
 
 
@@ -36,7 +45,7 @@ B2: Chạy file <a href="Testbench\tb_equalizer_8band.v">tb_equalizer_8band.v</a
 B3: Chạy file <a href="Tools\scale\scale32To16bit.py">scale32To16bit.py</a> để scale các file đầu ra của B1 về 16bits
 Sau đó đem chuyển thành file wav bằng <a href="Tools\wav convert\wav convert.py">wav convert.py</a>
 
-B4: Vẽ phổ và so sánh với output_python.txt( nhưng chưa làm được python equalizer).
+B4: Vẽ phổ cho file wav mới <a href="Tools\wav convert\equalizer_ouput.wav">equalizer_ouput.wav</a> được tạo ra từ code Verilog và so sánh với output_python.txt( nhưng chưa làm được python equalizer).
 
 
 ## 4. Kết quả tổng hợp trên kit 

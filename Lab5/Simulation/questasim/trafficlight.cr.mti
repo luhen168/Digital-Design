@@ -1,16 +1,16 @@
-C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Testbench/tb_count.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Testbench/tb_count.v
-QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module tb_count
-
-Top level modules:
-	tb_count
-
-} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/count.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/count.v
+C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/count.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/count.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module count
 
 Top level modules:
 	count
+
+} {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Testbench/tb_count.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Testbench/tb_count.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module tb_count
+
+Top level modules:
+	tb_count
 
 } {} {}} C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/pulse_1s.v {1 {vlog -work work -vopt C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/pulse_1s.v
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013

@@ -31,4 +31,4 @@ def scale_signed_32_to_signed_16(input_file, output_file):
                 f.write(format(scaled_value, '016b') + '\n')
 
 # Gọi hàm để chuyển đổi dữ liệu từ 32-bit sang 16-bit
-scale_signed_32_to_signed_16(r'C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Code\output_file.txt', 'output16bit.txt')
+scale_signed_32_to_signed_16(r'C:\Users\luan1\OneDrive\Desktop\TKS\Lab\Lab4\Testbench\output32bit.txt', 'output16bit.txt')

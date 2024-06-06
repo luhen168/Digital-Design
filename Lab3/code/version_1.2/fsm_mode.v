@@ -2,12 +2,11 @@ module fsm_mode(
     input clk,
     input rst,
     input mode_button,
-	 input display_switch,
+	input display_switch,
     output reg [2:0] state
 );
     
-    // reg [2:0] state_next = NORMAL;
-	 reg pre_mode_button ;
+    reg [2:0] next_state = NORMAL;
 
     localparam NORMAL = 3'b000;
     localparam SS = 3'b001;
@@ -18,65 +17,36 @@ module fsm_mode(
     localparam YY = 3'b110;
     localparam YY2 = 3'b111;
 
-    always @(posedge clk  or negedge rst) begin
+    always @(negedge mode_button or negedge rst) begin
         if (~rst)
-            state <= NORMAL;
-        else begin
-			if(mode_button != pre_mode_button) begin 
-				pre_mode_button <= mode_button;
-            if(display_switch == 0 && mode_button == 0) begin
-                case(state)
-                    NORMAL: 
-                        state <= SS;
-                    SS: 
-                        state <= MI;
-                    MI: 
-                        state <= HH;
-                    HH: 
-                        state <= NORMAL;
-                    default: 
-                        state <= NORMAL;
-                endcase  
-            end else if(display_switch == 1 && mode_button == 0) begin
-                case(state)
-                    NORMAL: 
-                        state <= DD;
-                    DD:
-                        state <= MO;
-                    MO: 
-                        state <= YY;
-                    YY: 
-                        state <= YY2;
-                    YY2:
-                        state <= NORMAL;
-                    default: 
-                        state <= NORMAL;
-                endcase
-            end
-			end
-		end
-    end 
+            next_state <= NORMAL;
+        else begin 
+            case(state)
+                NORMAL: 
+                    if(display_switch == 0) next_state <= SS;
+                    else next_state <= DD;
+                SS: next_state <= MI;
+                MI: next_state <= HH;
+                HH: next_state <= NORMAL;
+
+                DD: next_state <= MO;
+                MO: next_state <= YY;
+                YY: next_state <= YY2;
+                YY2: next_state <= NORMAL;
+                    
+                default: next_state <= NORMAL;
+            endcase
+        end
+	end
+
+    always @(posedge clk) begin
+        if(display_switch == 1) begin 
+            if (state == SS || state == MI || state == HH) state <= NORMAL;
+            else state <= next_state; 
+        end else begin
+            if (state == DD || state == MO || state == YY || state == YY2) state <= NORMAL;
+            else state <= next_state;     
+        end
+    end
 endmodule
-    // always @(negedge mode_button) begin 
-    // // always @(mode_button or state) begin 
-    //         state_next = NORMAL;
-    //         case(state)
-    //             NORMAL: state_next = SS;
-    //             SS: state_next = MI;
-    //             MI: state_next = HH;
-    //             HH: state_next = DD;
-    //             DD: state_next = MO;
-    //             MO: state_next = YY;
-    //             YY: state_next = NORMAL;
-    //             default: state_next = NORMAL;
-    //         endcase
-    // end 
 
-
-    // always@(posedge clk or negedge rst) begin 
-    //     if(~rst)
-    //        state <= NORMAL;
-    //     else 
-    //        state <= state_next; 
-    // end  
-// endmodule

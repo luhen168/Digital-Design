@@ -18,22 +18,22 @@ Z2 OL;O;10.2c;57
 Z3 dC:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab4/Simulation/questasim
 !s110 1713969395
 T_opt1
-VUg@`=REINV:I0?5Q9kEdY0
+!s110 1714639319
+V0;3Gm>cC<z2Hj98i]hhTI2
 R1
-=1-68f728ba1f7c-66291941-1b8-658
+=1-68f728ba1f7c-663351d6-22f-16a4
 o-quiet -auto_acc_if_foreign -work work -O0
 n@_opt1
 R2
-R3
-!s110 1713969473
 T_opt2
-!s110 1713977748
 V<Be^X_AX1?PKgBANUNi8@2
 R1
 =8-68f728ba1f7c-66293994-313-41c
 o-quiet -auto_acc_if_foreign -work work +acc -O0
 n@_opt2
 R2
+R3
+!s110 1713977748
 vbcd
 Z4 !s110 1713950492
 I3g=6WooQKci7;nha;iAY:3
@@ -126,10 +126,10 @@ R9
 r1
 31
 R13
+Z21 !s110 1714639292
 !s100 [_ijG2j2<8KN9bnT7OQ:V3
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/count.v|
-!s110 1713977738
-!s108 1713977738.949000
+!s108 1714639292.383000
 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/count.v|
 !i10b 1
 !s85 0
@@ -155,6 +155,7 @@ R13
 !s85 0
 !i111 0
 vpulse_1s
+R21
 IZXWceM7MW[2oF@zgYaUzU2
 R5
 R6
@@ -166,10 +167,9 @@ R9
 r1
 31
 R13
-Z21 !s110 1713977739
 !s100 e[BIWm@EDG1cK^<_K6]B61
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/pulse_1s.v|
-!s108 1713977739.048000
+!s108 1714639292.711000
 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Code/ver_team/pulse_1s.v|
 !i10b 1
 !s85 0
@@ -187,11 +187,11 @@ R9
 r1
 31
 R13
+!s100 cSg4B:k_H5:6W<0eZRj[;3
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Testbench/tb_count.v|
 !i10b 1
-!s100 cSg4B:k_H5:6W<0eZRj[;3
 !s85 0
-!s108 1713977739.149000
+!s108 1714639292.820000
 !s107 C:/Users/luan1/OneDrive/Desktop/TKS/Lab/Lab5/Testbench/tb_count.v|
 !i111 0
 vtb_trafficlight

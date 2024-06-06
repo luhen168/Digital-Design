@@ -86,20 +86,20 @@ enable_pulse_1s <= fsm_state_handler:fsm_state_handler.enable_pulse_1s
 
 
 |century_clock|fsm:inst_fsm|fsm_mode:fsm_mode
-clk => pre_mode_button.CLK
 clk => state[0]~reg0.CLK
 clk => state[1]~reg0.CLK
 clk => state[2]~reg0.CLK
-rst => state[0]~reg0.ACLR
-rst => state[1]~reg0.ACLR
-rst => state[2]~reg0.ACLR
-rst => pre_mode_button.ENA
-mode_button => always0.IN1
-mode_button => pre_mode_button.DATAB
-mode_button => always0.IN0
-mode_button => always0.IN0
-display_switch => always0.IN1
-display_switch => always0.IN1
+rst => next_state[0].ACLR
+rst => next_state[1].ACLR
+rst => next_state[2].ACLR
+mode_button => next_state[0].CLK
+mode_button => next_state[1].CLK
+mode_button => next_state[2].CLK
+display_switch => state.OUTPUTSELECT
+display_switch => state.OUTPUTSELECT
+display_switch => state.OUTPUTSELECT
+display_switch => Mux0.IN7
+display_switch => Mux1.IN7
 state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
