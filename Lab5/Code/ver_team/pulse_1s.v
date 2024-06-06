@@ -1,6 +1,6 @@
 module pulse_1s (
     input clk,
-    input rst,
+    input rst_n,
     // input ena_count,
     output reg pulse_1s
 );
@@ -10,8 +10,8 @@ module pulse_1s (
 
     reg [31:0] counter;
 
-    always @(posedge clk or negedge rst)begin
-        if (~rst) begin      
+    always @(posedge clk or negedge rst_n)begin
+        if (~rst_n) begin      
             counter <= 0;
             pulse_1s <= 0;
         end else begin
